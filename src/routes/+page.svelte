@@ -1,13 +1,22 @@
+<script>
+	import photo from '$lib/images/photo.jpg';
+</script>
+
 <main>
 	<h1>SA lab :: ARCH WEEKEND</h1>
 	<div class="imageContainer"></div>
 
+	<div class="running-text-container">
+		<h3 class="running-text">Rhino + Grasshopper + Blender + HTML + CSS + JavaScript</h3>
+	</div>
+
 	<div class="gridContainer">
-		<div class="gridBigCard">
-			<div class="running-text-container">
+		<!-- <div class="gridBigCard">
+			<h3 class="running-text">Rhino + Grasshopper + Blender + HTML + CSS + JavaScript</h3> -->
+		<!-- <div class="running-text-container">
 				<h3 class="running-text">Rhino + Grasshopper + Blender + HTML + CSS + JavaScript</h3>
 			</div>
-		</div>
+		</div> -->
 
 		<div class="gridSmallCard">
 			<h3>29 и 30 июня</h3>
@@ -89,24 +98,28 @@
 			</div>
 		</div>
 	</div>
-	<div class="gridContainer" style='border: none;'>
+	<div class="gridContainer" style="border: none;">
 		<div class="gridBigCard" style="border: none; padding-top: 10px;">
 			<div class="gridCardContainer">
 				<h3>Куратор :: Степан Кухарский</h3>
-				<p>
-					Всем привет! Меня зовут Степан. Я архитектор. Более 10 лет в составе команды SA lab я
-					создаю городские территории, здания, малые формы, а также виртуальные пространства и игры.
-					<br /><br />Я стараюсь делиться своим опытом и принимаю участие в ведущих международных
-					конференциях - DigitalFUTURES, CDRF, eCAADe.
-					<br /><br />Творческий процесс - это эксперимент. А образовательная деятельность -
-					возможность провести большее количество экспериментов с большой ценностью для всех
-					участников. Присоединяйтесь на наш ARCH WEEKEND!
-				</p>
+				<div class="curatorTextContainer">
+					<img src={photo} alt="curator" />
+					<p>
+						Всем привет! Меня зовут Степан. Я архитектор. Более 10 лет в составе команды SA lab я
+						создаю городские территории, здания, малые формы, а также виртуальные пространства и
+						игры.
+						<br /><br />Я стараюсь делиться своим опытом и принимаю участие в ведущих международных
+						конференциях - DigitalFUTURES, CDRF, eCAADe.
+						<br /><br />Творческий процесс - это эксперимент. А образовательная деятельность -
+						возможность провести большее количество экспериментов с большой ценностью для всех
+						участников. Присоединяйтесь на наш ARCH WEEKEND!
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>
 
-<div class='gridContainer'>
+	<div class="gridContainer">
 		<div class="gridSmallCard" style="justify-content: start; align-items: start;">
 			<div class="gridCardContainer">
 				<h3>TL;DR</h3>
@@ -134,7 +147,7 @@
 			</div>
 		</div>
 
-		<div class="gridBigCard">
+		<div class="gridBigCard" style="padding: 0;">
 			<button class="registerButton">Записаться</button>
 		</div>
 
@@ -179,7 +192,7 @@
 		font-weight: 300;
 		box-sizing: border-box;
 	}
-	h1{
+	h1 {
 		background-color: #f9f9f9;
 		margin: 0;
 		padding: 20px 0;
@@ -205,6 +218,8 @@
 	}
 
 	.running-text-container {
+		border: 1.5px solid #1a1a1a;
+		border-bottom: none;
 		box-sizing: border-box;
 		white-space: nowrap;
 		text-transform: uppercase;
@@ -253,7 +268,7 @@
 		justify-content: center;
 		align-items: center;
 	}
-	.gridSmallCard h3{
+	.gridSmallCard h3 {
 		text-align: center;
 	}
 	.gridBigCard {
@@ -268,6 +283,20 @@
 		margin: 0;
 		font-weight: 500;
 		color: blue;
+	}
+	.curatorTextContainer {
+		margin-top: 20px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 10px;
+		padding: 10px;
+		box-sizing: border-box;
+	}
+	.curatorTextContainer img {
+		max-width: 300px;
+	}
+	.curatorTextContainer p {
+		margin: 0;
 	}
 	.registerButton {
 		width: 100%;
@@ -303,7 +332,7 @@
 		background: #f9f9f9;
 		padding: 10px;
 		box-sizing: border-box;
-		color: #1a1a1a;
+		color: #919191;
 		font-weight: 300;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -343,13 +372,25 @@
 	}
 
 	@media screen and (max-width: 700px) {
-		/* .gridContainer {
+		.gridContainer {
 			display: grid;
 			grid-template-columns: 1fr;
-		} */
-		/* .gridBigCard {
+		}
+		.gridBigCard {
 			grid-column: span 1;
 			padding: 10px;
-		} */
+		}
+		.footerContainer {
+			display: grid;
+			grid-template-columns: 1fr;
+		}
+		.curatorTextContainer {
+			display: grid;
+			grid-template-columns: 1fr;
+		}
+		.curatorTextContainer img{
+			margin: auto;
+			margin-bottom: 20px;
+		}
 	}
 </style>
