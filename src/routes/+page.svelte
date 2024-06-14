@@ -1,10 +1,17 @@
 <script>
 	import photo from '$lib/images/photo.jpg';
+	import { Canvas } from '@threlte/core';
+	import Scene from '$lib/Scene.svelte';
 </script>
 
 <main>
 	<h1>SA lab :: ARCH WEEKEND</h1>
-	<div class="imageContainer"></div>
+	<div class="canvasContainer">
+		<Canvas>
+			<Scene />
+		</Canvas>
+	</div>
+	<!-- <div class="imageContainer"></div> -->
 
 	<div class="running-text-container">
 		<h3 class="running-text">Rhino + Grasshopper + Blender + HTML + CSS + JavaScript</h3>
@@ -164,7 +171,7 @@
 		<p>политика конфиденциальности</p>
 		<p>публичная оферта</p>
 	</div>
-		<p style='text-align: center;'>© 2024 SA lab</p>
+	<p style="text-align: center;">© 2024 SA lab</p>
 </footer>
 
 <style>
@@ -198,6 +205,14 @@
 		/* border: 1px solid #1a1a1a; */
 		/* margin-bottom: 10px; */
 		box-sizing: border-box;
+	}
+	.canvasContainer {
+		width: 100%;
+		height: 80svh;
+		box-sizing: border-box;
+		cursor: pointer;
+		background: radial-gradient(circle, white, blue);
+		filter: brightness(1.1);
 	}
 
 	.running-text-container {
@@ -328,7 +343,7 @@
 		background: #f9f9f9;
 		padding: 10px;
 		box-sizing: border-box;
-		
+
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		text-align: center;
