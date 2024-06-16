@@ -1,5 +1,6 @@
 <script>
 	import photo from '$lib/images/photo.jpg';
+	import demo from '$lib/images/demo.mp4';
 	import { Canvas } from '@threlte/core';
 	import Scene from '$lib/Scene.svelte';
 </script>
@@ -101,6 +102,9 @@
 			</div>
 		</div>
 	</div>
+
+	<video src="{demo}" autoplay={true} muted={true} preload="auto" loop={true} ></video>
+
 	<div class="gridContainer" style="border: none;">
 		<div class="gridBigCard" style="border: none; padding-top: 10px;">
 			<div class="gridCardContainer">
@@ -193,6 +197,10 @@
 	}
 	a {
 		color: blue;
+	}
+	video{
+		margin: 20px 0;
+		width: 100%;
 	}
 
 	.imageContainer {
@@ -301,6 +309,7 @@
 		box-sizing: border-box;
 	}
 	.curatorTextContainer img {
+		width: 80%;
 		max-width: 300px;
 	}
 	.curatorTextContainer p {
