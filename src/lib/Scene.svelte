@@ -14,14 +14,14 @@
 <!-- <T.AmbientLight intensity={1} /> -->
  <T.HemisphereLight args={['white', 'blue']} intensity={1.25}/>
 
-<!-- <T.FogExp2
-	color={'#0000ff'}
-	density={0.0055}
+<T.FogExp2
+	color={'#fff'}
+	density={0.0065}
 	on:create={({ ref }) => {
 		scene.fog = ref;
 		//cleanup(() => scene.fog = null)
 	}}
-/> -->
+/>
 <!-- <T.GridHelper
   args={[200, 10]}
   position.y={-0.001}
