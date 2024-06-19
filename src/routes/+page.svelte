@@ -171,7 +171,7 @@
 </main>
 <footer>
 	<div class="footerContainer">
-		<p>реквизиты</p>
+		<a href='requisites'>реквизиты</a>
 		<a href='/privacy-policy'>политика конфиденциальности</a>
 		<a href='/oferta'>публичная оферта</a>
 	</div>
@@ -187,7 +187,7 @@
 		box-sizing: border-box;
 	}
 	h1 {
-		background-color: #f9f9f9;
+		/* background-color: #f9f9f9; */
 		margin: 0;
 		padding: 20px 0;
 	}
@@ -218,8 +218,8 @@
 		width: 100%;
 		height: 80svh;
 		box-sizing: border-box;
-		cursor: pointer;
-		background: radial-gradient(circle, white, blue);
+		/* cursor: pointer; */
+		/* background: radial-gradient(circle, white, blue); */
 		filter: brightness(1.1);
 	}
 
@@ -232,7 +232,7 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		color: blue;
-		background-color: #f9f9f9;
+		/* background-color: #f9f9f9; */
 		/* font-size: 30px; */
 	}
 
@@ -275,7 +275,7 @@
 		/* padding: 10px; */
 		border: 1px solid #1a1a1a;
 		/* box-shadow: 0 0 2px #1a1a1a; */
-		background-color: #f9f9f9;
+		/* background-color: #f9f9f9; */
 		box-sizing: border-box;
 		display: flex;
 		flex-direction: column;
@@ -288,7 +288,7 @@
 	.gridBigCard {
 		border: 1px solid #1a1a1a;
 		grid-column: span 2;
-		background-color: #f9f9f9;
+		/* background-color: #f9f9f9; */
 		box-sizing: border-box;
 		display: flex;
 		flex-direction: column;
@@ -354,7 +354,7 @@
 	}
 	.footerContainer {
 		/* border: 0.5px solid blue; */
-		background: #f9f9f9;
+		/* background: #f9f9f9; */
 		padding: 10px;
 		box-sizing: border-box;
 
@@ -416,6 +416,9 @@
 		.curatorTextContainer img {
 			margin: auto;
 			margin-bottom: 20px;
+		}
+		.statement{
+			font-size: 1.5rem;
 		}
 		.statement p {
 			columns: 1;
