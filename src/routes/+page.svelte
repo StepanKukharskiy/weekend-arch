@@ -32,7 +32,7 @@
 			<h3>7500₽</h3>
 		</div>
 		<div class="gridBigCard" style="padding: 0;">
-			<button class="registerButton">Записаться</button>
+			<a class="registerButton" href='/register'>Записаться</a>
 		</div>
 	</div>
 
@@ -316,7 +316,7 @@
 		margin: 0;
 	}
 	.registerButton {
-		width: 100%;
+		/* width: 100%; */
 		height: 100%;
 		min-height: 80px;
 		margin: 0;
@@ -330,6 +330,9 @@
 		transition: all 0.25s;
 		padding: 10px;
 		text-decoration: underline;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	.registerButton:hover {
 		background-color: blue;
