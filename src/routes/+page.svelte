@@ -172,8 +172,8 @@
 <footer>
 	<div class="footerContainer">
 		<p>реквизиты</p>
-		<p>политика конфиденциальности</p>
-		<p>публичная оферта</p>
+		<a href='/privacy-policy'>политика конфиденциальности</a>
+		<a href='/oferta'>публичная оферта</a>
 	</div>
 	<p style="text-align: center;">© 2024 SA lab</p>
 </footer>
@@ -346,6 +346,11 @@
 		font-size: 1rem;
 		color: #919191;
 		font-weight: 300;
+	}
+	footer a{
+		color: #919191;
+		text-decoration: none;
+		margin: 10px 0;
 	}
 	.footerContainer {
 		/* border: 0.5px solid blue; */
