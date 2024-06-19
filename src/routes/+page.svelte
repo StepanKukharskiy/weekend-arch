@@ -103,7 +103,7 @@
 		</div>
 	</div>
 
-	<video src="{demo}" autoplay={true} muted={true} preload="auto" loop={true} ></video>
+	<video src="{demo}" autoplay={true} muted={true} preload="auto" loop={true} playsinline={true} style='width: 100%;'></video>
 
 	<div class="gridContainer" style="border: none;">
 		<div class="gridBigCard" style="border: none; padding-top: 10px;">
