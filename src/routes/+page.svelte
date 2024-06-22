@@ -220,7 +220,7 @@
 		box-sizing: border-box;
 		/* cursor: pointer; */
 		/* background: radial-gradient(circle, white, blue); */
-		filter: brightness(1.1);
+		filter: brightness(1.05) contrast(1.1);
 	}
 
 	.running-text-container {
