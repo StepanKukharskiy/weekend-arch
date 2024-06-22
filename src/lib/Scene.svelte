@@ -7,7 +7,7 @@
 </script>
 
 <T.PerspectiveCamera makeDefault fov={50} position={[-60, 40, -60]}>
-	<OrbitControls enableDamping autoRotate enableZoom={false} enablePan={false} enableRotate={true} target={[45, 35, -27]} />
+	<OrbitControls enableDamping autoRotate enableZoom={false} enablePan={false} enableRotate={false} target={[45, 35, -27]} />
 </T.PerspectiveCamera>
 
 <T.DirectionalLight intensity={1.5} position.x={-100} position.y={100} position.z={100} castShadow />
