@@ -21,7 +21,7 @@
 
 	<div class="gridContainer">
 		<div class="gridSmallCard">
-			<h3>29 и 30 июня</h3>
+			<h3>6 июля</h3>
 		</div>
 		<div class="gridSmallCard">
 			<h3>online + запись</h3>
@@ -82,7 +82,7 @@
 
 		<div class="gridSmallCard" style="justify-content: start; align-items: center;">
 			<div class="gridCardContainer">
-				<h3>29 июня</h3>
+				<h3>Часть 1</h3>
 				<ul>
 					<li>Основы моделирования в Grasshopper</li>
 					<li>Моделирование воксельного здания</li>
@@ -94,7 +94,7 @@
 
 		<div class="gridSmallCard" style="justify-content: start; align-items: center;">
 			<div class="gridCardContainer">
-				<h3>30 июня</h3>
+				<h3>Часть 2</h3>
 				<ul>
 					<li>Основы работы с HTML, CSS, JavaScript</li>
 					<li>Основы работы с библиотекой Three.js</li>

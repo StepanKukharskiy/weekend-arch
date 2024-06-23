@@ -7,7 +7,7 @@
 </script>
 
 <T.PerspectiveCamera makeDefault fov={50} position={[-40, 30, 40]}>
-	<OrbitControls enableDamping autoRotate enableZoom={false} enablePan={false} enableRotate={false} target={[30, 25, -27]} />
+	<OrbitControls enableDamping autoRotate enableZoom={false} enablePan={false} enableRotate={false} target={[30, 25, -19.5]} />
 </T.PerspectiveCamera>
 
 <T.DirectionalLight color={'#fff3c2'} intensity={1.85} position.x={-100} position.y={100} position.z={100} castShadow />
@@ -34,7 +34,7 @@
   opacity={0.95}
 />
 
-<GLTF url="/assets/archweekend_1_3.glb" receiveShadow castShadow scale={1} />
+<GLTF url="/assets/archweekend_1_4.glb" receiveShadow castShadow scale={1} />
 
 <!-- <T.Mesh receiveShadow castShadow>
   <T.BoxGeometry args={[2, 2, 2]}/>
