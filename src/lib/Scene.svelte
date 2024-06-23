@@ -16,7 +16,7 @@
 
 <T.FogExp2
 	color={'#f0f0ff'}
-	density={0.0075}
+	density={0.0095}
 	on:create={({ ref }) => {
 		scene.fog = ref;
 		//cleanup(() => scene.fog = null)
@@ -34,7 +34,7 @@
   opacity={0.95}
 />
 
-<GLTF url="/assets/archweekend_1_4.glb" receiveShadow castShadow scale={1} />
+<GLTF url="/assets/archweekend_1_5.glb" receiveShadow castShadow scale={1} />
 
 <!-- <T.Mesh receiveShadow castShadow>
   <T.BoxGeometry args={[2, 2, 2]}/>
