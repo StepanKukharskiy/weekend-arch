@@ -8,6 +8,7 @@
 <main>
 	<h1>SA lab :: ARCH WEEKEND</h1>
 	<div class="canvasContainer">
+		<div style='width: 100%; height: 100%; position: absolute; z-index: 2;'></div>
 		<Canvas>
 			<Scene />
 		</Canvas>

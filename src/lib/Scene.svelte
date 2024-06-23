@@ -6,16 +6,16 @@
 	const { scene } = useThrelte();
 </script>
 
-<T.PerspectiveCamera makeDefault fov={50} position={[-60, 40, -60]}>
-	<OrbitControls enableDamping autoRotate enableZoom={false} enablePan={false} enableRotate={false} target={[45, 35, -27]} />
+<T.PerspectiveCamera makeDefault fov={50} position={[-40, 30, 40]}>
+	<OrbitControls enableDamping autoRotate enableZoom={false} enablePan={false} enableRotate={false} target={[30, 25, -27]} />
 </T.PerspectiveCamera>
 
-<T.DirectionalLight intensity={1.5} position.x={-100} position.y={100} position.z={100} castShadow />
+<T.DirectionalLight color={'#fff3c2'} intensity={1.85} position.x={-100} position.y={100} position.z={100} castShadow />
 <!-- <T.AmbientLight intensity={1} /> -->
- <T.HemisphereLight args={['lightgrey', 'blue']} intensity={2}/>
+ <T.HemisphereLight args={['#f0f0ff', 'blue']} intensity={2}/>
 
 <T.FogExp2
-	color={'#fff'}
+	color={'#f0f0ff'}
 	density={0.0075}
 	on:create={({ ref }) => {
 		scene.fog = ref;
@@ -28,13 +28,13 @@
 /> -->
 
 <ContactShadows
-  scale={200}
+  scale={150}
   blur={2}
   far={250}
   opacity={0.95}
 />
 
-<GLTF url="/assets/archweekend_1_2.glb" receiveShadow castShadow scale={1} />
+<GLTF url="/assets/archweekend_1_3.glb" receiveShadow castShadow scale={1} />
 
 <!-- <T.Mesh receiveShadow castShadow>
   <T.BoxGeometry args={[2, 2, 2]}/>
