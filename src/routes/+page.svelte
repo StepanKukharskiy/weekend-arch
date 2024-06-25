@@ -27,7 +27,7 @@
 			<h3>online + запись</h3>
 		</div>
 		<div class="gridSmallCard">
-			<h3>2,5 часа каждый день</h3>
+			<h3>4 часа</h3>
 		</div>
 		<div class="gridSmallCard">
 			<h3>7500₽</h3>
@@ -217,11 +217,11 @@
 	}
 	.canvasContainer {
 		width: 100%;
-		height: 80svh;
+		height: 80vh;
 		box-sizing: border-box;
 		/* cursor: pointer; */
 		/* background: radial-gradient(circle, white, blue); */
-		filter: brightness(1.05) contrast(1.1);
+		filter: brightness(1.025) contrast(1.05);
 	}
 
 	.running-text-container {
