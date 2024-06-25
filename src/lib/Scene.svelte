@@ -34,7 +34,7 @@
   opacity={0.95}
 />
 
-<GLTF url="/assets/archweekend_1_7.glb" receiveShadow castShadow scale={1} />
+<GLTF url="/assets/archweekend_1_9.glb" receiveShadow castShadow scale={1} />
 
 <!-- <T.Mesh receiveShadow castShadow>
   <T.BoxGeometry args={[2, 2, 2]}/>
