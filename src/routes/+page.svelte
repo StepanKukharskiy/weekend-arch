@@ -104,7 +104,7 @@
 		</div>
 	</div>
 
-	<video src="{demo}" autoplay={true} muted={true} preload="auto" loop={true} playsinline={true} style='width: 100%;'></video>
+	<!-- <video src="{demo}" autoplay={true} muted={true} preload="auto" loop={true} playsinline={true} style='width: 100%;'></video> -->
 
 	<div class="gridContainer" style="border: none;">
 		<div class="gridBigCard" style="border: none; padding-top: 10px;">
@@ -113,14 +113,10 @@
 				<div class="curatorTextContainer">
 					<img src={photo} alt="curator" />
 					<p>
-						Всем привет! Меня зовут Степан. Я - архитектор. Более 10 лет в составе команды SA lab я
-						создаю городские территории, здания, малые формы, а также виртуальные пространства и
-						игры.
-						<br /><br />Я стараюсь делиться своим опытом и принимаю участие в ведущих международных
-						конференциях - DigitalFUTURES, CDRF, eCAADe.
-						<br /><br />Творческий процесс - это эксперимент. А образовательная деятельность -
-						возможность провести большее количество экспериментов с большой ценностью для всех
-						участников. Присоединяйтесь на наш ARCH WEEKEND!
+						Привет!
+<br />Меня зовут Степан Кухарский. Я архитектор и вычислительный дизайнер, более 10 лет использую алгоритмы в работе с городскими территориями, общественными пространствами, зданиями, разрабатываю игры и виртуальную архитектуру.
+<br />Я люблю делиться опытом и преподаю на международных площадках и конференциях: DigitalFUTURES, CDRF, eCAADe, LiveAcademy. На воркшопах я выстраиваю дружелюбную атмосферу, открытую для экспериментов и неожиданных решений. 
+<br />Присоединяйтесь к ARCHWEEKEND — проведём архитектурно выходные.
 					</p>
 				</div>
 			</div>
@@ -153,7 +149,7 @@
 		</div>
 
 		<div class="gridBigCard" style="padding: 0;">
-			<button class="registerButton">Записаться</button>
+			<a class="registerButton" href='/register'>Записаться</a>
 		</div>
 
 		<div class="gridBigCard">
@@ -323,6 +319,7 @@
 		margin: 0;
 		border: none;
 		text-transform: uppercase;
+		font-family: 'Roboto', sans-serif;
 		font-size: 20px;
 		font-weight: 500;
 		background: #0000ff10;
