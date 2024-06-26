@@ -410,6 +410,7 @@
 	@media screen and (max-width: 700px) {
 		h1{
 			flex-direction: column;
+			text-align: center;
 		}
 		.gridContainer {
 			display: grid;
