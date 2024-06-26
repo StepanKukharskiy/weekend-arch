@@ -198,6 +198,10 @@
 		background-size: 100px 100px;
 		background-position: center;
 	}
+	.logo:hover{
+		transform: rotateZ(360deg);
+		transition: all 1s;
+	}
 	h3 {
 		/* font-size: 42px; */
 		font-weight: 500;
