@@ -1,12 +1,13 @@
 <script>
 	import photo from '$lib/images/photo.jpg';
+	import logo from '$lib/images/logo_nobg.png';
 	import demo from '$lib/images/demo.mp4';
 	import { Canvas } from '@threlte/core';
 	import Scene from '$lib/Scene.svelte';
 </script>
 
 <main>
-	<h1>SA lab :: ARCH WEEKEND</h1>
+	<h1>SA lab <span class='logo' style='background-image: url({logo});'></span> ARCH WEEKEND</h1>
 	<div class="canvasContainer">
 		<div style='width: 100%; height: 100%; position: absolute; z-index: 2;'></div>
 		<Canvas>
@@ -27,7 +28,7 @@
 			<h3>online + запись</h3>
 		</div>
 		<div class="gridSmallCard">
-			<h3>4 часа</h3>
+			<h3>5 часов</h3>
 		</div>
 		<div class="gridSmallCard">
 			<h3>7500₽</h3>
@@ -187,6 +188,15 @@
 		/* background-color: #f9f9f9; */
 		margin: 0;
 		padding: 20px 0;
+		display: flex;
+		align-items: center;
+	}
+	.logo{
+		display: block;
+		width: 80px;
+		height: 80px;
+		background-size: 100px 100px;
+		background-position: center;
 	}
 	h3 {
 		/* font-size: 42px; */
@@ -320,7 +330,7 @@
 		border: none;
 		text-transform: uppercase;
 		font-family: 'Montserrat', sans-serif;
-		font-size: 20px;
+		/* font-size: 20px; */
 		font-weight: 500;
 		background: #0000ff10;
 		color: blue;
@@ -398,6 +408,9 @@
 	}
 
 	@media screen and (max-width: 700px) {
+		h1{
+			flex-direction: column;
+		}
 		.gridContainer {
 			display: grid;
 			grid-template-columns: 1fr;

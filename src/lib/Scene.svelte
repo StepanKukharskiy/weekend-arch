@@ -16,7 +16,7 @@
 
 <T.FogExp2
 	color={'#f0f0ff'}
-	density={0.0095}
+	density={0.0075}
 	on:create={({ ref }) => {
 		scene.fog = ref;
 		//cleanup(() => scene.fog = null)
