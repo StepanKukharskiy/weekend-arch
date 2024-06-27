@@ -231,7 +231,7 @@
 		box-sizing: border-box;
 		/* cursor: pointer; */
 		/* background: radial-gradient(circle, white, blue); */
-		filter: brightness(1.025) contrast(1.05);
+		filter: brightness(1.025) contrast(1.25);
 	}
 
 	.running-text-container {
