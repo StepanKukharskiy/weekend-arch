@@ -22,19 +22,19 @@
 
 	<div class="gridContainer">
 		<div class="gridSmallCard">
-			<h3>6 июля</h3>
+			<h3>10 августа</h3>
 		</div>
 		<div class="gridSmallCard">
 			<h3>online + запись</h3>
 		</div>
 		<div class="gridSmallCard">
-			<h3>5 часов</h3>
+			<h3>4 часа</h3>
 		</div>
 		<div class="gridSmallCard">
-			<h3>7500₽</h3>
+			<h3>5500₽</h3>
 		</div>
 		<div class="gridBigCard" style="padding: 0;">
-			<a class="registerButton" href='/register'>Записаться</a>
+			<a class="registerButton" href='https://auth.robokassa.ru/merchant/Invoice/R2sosFTl_kmBN57ebLesEA'>Хочу с вами</a>
 		</div>
 	</div>
 
@@ -145,7 +145,7 @@
 		</div>
 
 		<div class="gridBigCard" style="padding: 0;">
-			<a class="registerButton" href='/register'>Записаться</a>
+			<a class="registerButton" href='https://auth.robokassa.ru/merchant/Invoice/R2sosFTl_kmBN57ebLesEA'>Хочу с вами</a>
 		</div>
 
 		<div class="gridBigCard">
@@ -235,7 +235,7 @@
 	}
 
 	.running-text-container {
-		border: 2px solid #1a1a1a;
+		border: 1.5px solid #1a1a1a;
 		border-bottom: none;
 		box-sizing: border-box;
 		white-space: nowrap;
