@@ -62,7 +62,7 @@
 
 	<div class="gridContainer">
 		<div class="gridSmallCard">
-			<h3>10 августа</h3>
+			<h3>17 августа</h3>
 		</div>
 		<div class="gridSmallCard">
 			<h3>online + запись</h3>
