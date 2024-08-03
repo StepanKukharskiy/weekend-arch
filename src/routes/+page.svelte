@@ -35,9 +35,10 @@
 				>
 			</button> 
 			<h3>ARCHWEEKEND vol 1.0</h3>
+			<p>После оплаты мы свяжемся с Вами по указанной почте в течение 24 часов.</p>
 			<a
 				class="registerButton"
-				href="https://auth.robokassa.ru/merchant/Invoice/R2sosFTl_kmBN57ebLesEA">Перейти к оплате</a
+				href="https://auth.robokassa.ru/merchant/Invoice/C9VGOo0i6UumxXvV8oI8Jg">Перейти к оплате</a
 			>
 
 			<p>
