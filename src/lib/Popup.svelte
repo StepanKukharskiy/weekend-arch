@@ -22,8 +22,13 @@
 		>
 	</button>
 
-	<a class="registerButton" href="https://auth.robokassa.ru/merchant/Invoice/R2sosFTl_kmBN57ebLesEA"
+	<!-- <a class="registerButton" href="https://auth.robokassa.ru/merchant/Invoice/R2sosFTl_kmBN57ebLesEA"
 		>Перейти к оплате</a
+	> -->
+
+	<p>Запись на Arch Weekend vol 1.0 завершена.</p>
+	<a class="registerButton" href="/"
+		>Ok</a
 	>
     
 	<p>
