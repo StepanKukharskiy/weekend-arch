@@ -263,9 +263,9 @@
 		</div>
 	</div>
 	<div class="gridContainer" style="border: none;">
-		<div class="gridCardContainer" style="width: 100%;">
+		<div class="gridCardContainer" style="width: 100%; min-height: 300px;">
 			<div class="canvasContainer" style="align-self: flex-start;">
-				<div style="width: 100%; height: 100%; position: absolute; z-index: 2;">
+				<div style="width: 100%; height: 100%; position: absolute; ">
 					<Canvas>
 						<Scene />
 					</Canvas>
