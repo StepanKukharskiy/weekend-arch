@@ -2,7 +2,7 @@
 	import photo from '$lib/images/photo.jpg';
 	import logo from '$lib/images/logo_nobg.png';
     import viewsGIF from '$lib/images/views_2.gif';
-	import demo from '$lib/images/demo.mp4';
+	import aw1 from '$lib/images/aw1.webp';
 	import { Canvas } from '@threlte/core';
 	import Scene from '$lib/Scene.svelte';
 
@@ -164,7 +164,7 @@
 				<p><b>В этот раз мы встретимся, чтобы:</b></p>
 				<ul class="noDots">
 					<li>👀 научиться работать с данными OSM,</li>
-					<li>🐆 разработать алгоритм анализа видимости участка и из окна здания,</li>
+					<li>🐆 разработать алгоритм анализа видимости на плане участка и здания,</li>
 					<li>🦄 разобраться с генеративными алгоритмами построения формы здания с учетом наилучшей видимости,</li>
 					<li>
 						⭐ добавить немного магии с HTML + CSS + JavaScript, чтобы создать интерактивную карту.
@@ -263,15 +263,14 @@
 		</div>
 	</div>
 	<div class="gridContainer" style="border: none;">
-		<div class="gridCardContainer" style="width: 100%; min-height: 300px;">
-			<div class="canvasContainer" style="align-self: flex-start;">
-				<div style="width: 100%; height: 100%; position: absolute; ">
-					<Canvas>
+
+			<div class="gridCardContainer" style='width: 100%; position: static;'>
+					<!-- <Canvas>
 						<Scene />
-					</Canvas>
-				</div>
+					</Canvas> -->
+					<img src={aw1} alt='archweekend 1' style='width: 100%;' />
 			</div>
-		</div>
+
 
 		<div class="gridCardContainer">
 			<p><b>ARCH WEEKEND vol 1.0</b></p>
@@ -380,22 +379,7 @@
 	ul {
 		max-width: 90%;
 	}
-	video {
-		margin: 20px 0;
-		width: 100%;
-	}
 
-	.imageContainer {
-		width: 100%;
-		height: 80svh;
-		background-image: url('https://images.adsttc.com/media/images/5bec/31c3/08a5/e5a5/8c00/0693/large_jpg/6.jpg?1542205883');
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
-		/* border: 1px solid #1a1a1a; */
-		/* margin-bottom: 10px; */
-		box-sizing: border-box;
-	}
 	.canvasContainer {
 		width: 100%;
 		height: 100%;
@@ -407,7 +391,6 @@
         align-items: center;
 		filter: brightness(1.025) contrast(1.25);
 	}
-
 	.running-text-container {
 		border: 1.5px solid #1a1a1a;
 		border-bottom: none;
@@ -443,6 +426,7 @@
 	}
 
 	.gridContainer {
+		width: 100%;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		border: 1px solid #1a1a1a;
