@@ -1,17 +1,18 @@
 <script>
 	import photo from '$lib/images/photo.jpg';
 	import logo from '$lib/images/logo_nobg.png';
-	import demo from '$lib/images/demo.mp4';
+    import viewsGIF from '$lib/images/views_4.gif';
+	import aw1 from '$lib/images/aw1.webp';
 	import { Canvas } from '@threlte/core';
 	import Scene from '$lib/Scene.svelte';
 
 	let popupState = false;
+    let popupRecordState = false;
 </script>
 
 <main>
 	{#if popupState}
 		<div class="popupContainer">
-			
 			<button
 				class="panelButton"
 				on:click={() => {
@@ -33,16 +34,53 @@
 						style="fill:none;stroke: blue; stroke-linecap:round;stroke-linejoin:round; stroke-width: 3;"
 					/></svg
 				>
-			</button> 
-			<h3>ARCHWEEKEND vol 1.0</h3>
-			<!-- <p>После оплаты мы свяжемся с Вами по указанной почте в течение 24 часов.</p>
+			</button>
+			<h3>ARCHWEEKEND vol 2.0</h3>
+			<p>После оплаты мы свяжемся с Вами по указанной почте в течение 24 часов.</p>
 			<a
 				class="registerButton"
-				href="https://auth.robokassa.ru/merchant/Invoice/C9VGOo0i6UumxXvV8oI8Jg">Перейти к оплате</a
-			> -->
-			<p>Запись на Arch Weekend vol 1.0 завершена.</p>
-			<a class="registerButton" href="/"
-				>Ok</a
+				href="https://auth.robokassa.ru/merchant/Invoice/ZlE2D-Qe60KjxJ5AK_dUHg">Перейти к оплате</a
+			>
+			<!-- <p>Запись на Arch Weekend vol 1.0 завершена.</p>
+			<a class="registerButton" href="/">Ok</a> -->
+
+			<p>
+				Нажимая на кнопку «Перейти к оплате», вы соглашаетесь с <a href="/privacy-policy"
+					>политикой обработки персональных данных</a
+				>.
+			</p>
+		</div>
+	{/if}
+
+    {#if popupRecordState}
+		<div class="popupContainer">
+			<button
+				class="panelButton"
+				on:click={() => {
+					popupRecordState = false;
+				}}
+			>
+				<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 19.02 19.02"
+					><title>icon_quit</title><line
+						x1="0.5"
+						y1="0.5"
+						x2="18.52"
+						y2="18.52"
+						style="fill:none;stroke: blue; stroke-linecap:round;stroke-linejoin:round; stroke-width: 3;"
+					/><line
+						x1="0.5"
+						y1="18.52"
+						x2="18.52"
+						y2="0.5"
+						style="fill:none;stroke: blue; stroke-linecap:round;stroke-linejoin:round; stroke-width: 3;"
+					/></svg
+				>
+			</button>
+			<h3>ARCHWEEKEND vol 1.0</h3>
+			<p>После оплаты мы вышлем ссылку на запись на указанную почту в течение 24 часов.</p>
+			<a
+				class="registerButton"
+				href="https://auth.robokassa.ru/merchant/Invoice/6pxdSCduT0S6zjyUPQdd-A">Перейти к оплате</a
 			>
 
 			<p>
@@ -54,10 +92,11 @@
 	{/if}
 	<h1>SA lab <span class="logo" style="background-image: url({logo});"></span> ARCH WEEKEND</h1>
 	<div class="canvasContainer">
-		<div style="width: 100%; height: 100%; position: absolute; z-index: 2;"></div>
+		<!-- <div style="width: 100%; height: 100%; position: absolute; z-index: 2;"></div>
 		<Canvas>
 			<Scene />
-		</Canvas>
+		</Canvas> -->
+        <img src={viewsGIF} alt='views animation' style='margin-bottom: 20px; width: 100%; max-width: 800px;'/>
 	</div>
 	<!-- <div class="imageContainer"></div> -->
 
@@ -67,7 +106,7 @@
 
 	<div class="gridContainer">
 		<div class="gridSmallCard">
-			<h3>17 августа</h3>
+			<h3>7 сентября, 11:00-15:00 GMT+3</h3>
 		</div>
 		<div class="gridSmallCard">
 			<h3>online + запись</h3>
@@ -79,9 +118,12 @@
 			<h3>5500₽</h3>
 		</div>
 		<div class="gridBigCard" style="padding: 0;">
-			<button class='registerButton' on:click={()=>{
-				popupState = true;
-			}}>ХОЧУ С ВАМИ</button>
+			<button
+				class="registerButton"
+				on:click={() => {
+					popupState = true;
+				}}>ХОЧУ С ВАМИ</button
+			>
 		</div>
 	</div>
 
@@ -98,8 +140,8 @@
 					<br /><br />
 					Архитекторы SA lab придумали ARCH WEEKEND, потому что знают, что учиться новому может быть
 					<span style="text-decoration: line-through;">больно</span>
-					весело. Мы предлагаем быстрое погружение в генеративный дизайн, цифровые миры,
-					искусственный интеллект и геймдизайн.
+					весело. Мы предлагаем быстрое погружение в генеративный дизайн, цифровые миры, искусственный
+					интеллект и геймдизайн.
 					<br /><br />
 					Более 10 лет мы используем в архитектурной практике цифровые технологии, а последние 5 лет
 					учим студентов из 22 стран. Полученные навыки помогают шире взглянуть на архитектуру, выстроить
@@ -114,18 +156,18 @@
 	<div class="gridContainer">
 		<div class="gridSmallCard">
 			<div class="gridCardContainer">
-				<h3>ARCHWEEKEND vol 1.0</h3>
+				<h3>ARCHWEEKEND vol 2.0</h3>
 			</div>
 		</div>
 		<div class="gridSmallCard">
 			<div class="gridCardContainer">
-				<p><b>В первый раз мы встретимся, чтобы:</b></p>
+				<p><b>В этот раз мы встретимся, чтобы:</b></p>
 				<ul class="noDots">
-					<li>👀 рассмотреть принципы формообразования воксельной архитектуры,</li>
-					<li>🐆 создать модель с использованием Rhino+Grasshopper,</li>
-					<li>🦄 создать на ее основе ассет в Blender для использования в браузере,</li>
+					<li>👀 научиться работать с данными OSM,</li>
+					<li>🐆 разработать алгоритм анализа видимости на плане участка и здания,</li>
+					<li>🦄 разобраться с генеративными алгоритмами построения формы здания с учетом наилучшей видимости,</li>
 					<li>
-						⭐ добавить немного магии с HTML + CSS + JavaScript, чтобы создать интерактивную сцену.
+						⭐ добавить немного магии с HTML + CSS + JavaScript, чтобы создать интерактивную карту.
 					</li>
 				</ul>
 			</div>
@@ -136,9 +178,9 @@
 				<h3>Часть 1</h3>
 				<ul>
 					<li>Основы моделирования в Grasshopper</li>
-					<li>Моделирование воксельного здания</li>
-					<li>Основы подготовки ассетов и их текстурирования в Blender</li>
-					<li>Подготовка ассета воксельного здания</li>
+					<li>Использование плагина Elk 2 и работа с OSM данными</li>
+					<li>Анализ видимости с помощью IsoVist</li>
+                    <li>Работа с эволюционными алгоритмами и Galapagos</li>
 				</ul>
 			</div>
 		</div>
@@ -148,8 +190,8 @@
 				<h3>Часть 2</h3>
 				<ul>
 					<li>Основы работы с HTML, CSS, JavaScript</li>
-					<li>Основы работы с библиотекой Three.js</li>
-					<li>Создание интерактивной сцены, которая будет работать в браузере</li>
+					<li>Основы работы с библиотекой p5.js или paper.js</li>
+					<li>Создание интерактивной карты, которая будет работать в браузере</li>
 				</ul>
 			</div>
 		</div>
@@ -184,7 +226,7 @@
 				<h3>Для кого</h3>
 				<ul>
 					<li>для новичков</li>
-					<li>для тех, кто начал изучать Rhino или Blender</li>
+					<li>для тех, кто начал изучать Rhino</li>
 					<li>для всех, кто хочет разобраться с основами работы в HTML, CSS, JavaScript.</li>
 				</ul>
 			</div>
@@ -195,7 +237,7 @@
 				<h3>Технические требования</h3>
 				<ul>
 					<li>наличие ноутбука или ПК с выходом в интернет</li>
-					<li>установленные Rhino, Grasshopper, Blender</li>
+					<li>установленные Rhino, Grasshopper, Elk 2</li>
 					<li>
 						регистрация на платформе <a href="https://kodiia.com" target="_blank">Kodiia.com</a>
 					</li>
@@ -203,11 +245,59 @@
 			</div>
 		</div>
 
-		<div class="gridBigCard" style="padding: 0;">
-			<button class='registerButton' on:click={()=>{
-				popupState = true;
-			}}>ХОЧУ С ВАМИ</button>
+        <div class="gridBigCard" style="padding: 0;">
+			<button
+				class="registerButton"
+				on:click={() => {
+					popupState = true;
+				}}>ХОЧУ С ВАМИ</button
+			>
 		</div>
+	</div>
+
+	<div class="gridContainer" style="border: none;">
+		<div class="gridBigCard" style="border: none; padding-top: 10px;">
+			<div class="gridCardContainer">
+				<h3>Прошедшие интенсивы</h3>
+			</div>
+		</div>
+	</div>
+	<div class="gridContainer" style="border: none;">
+
+			<div class="gridCardContainer" style='width: 100%; position: static;'>
+					<!-- <Canvas>
+						<Scene />
+					</Canvas> -->
+					<img src={aw1} alt='archweekend 1' style='width: 100%;' />
+			</div>
+
+
+		<div class="gridCardContainer">
+			<p><b>ARCH WEEKEND vol 1.0</b></p>
+			<p>В первый раз мы встретились, чтобы:</p>
+			<ul class="noDots">
+				<li>👀 рассмотреть принципы формообразования воксельной архитектуры,</li>
+				<li>🐆 создать модель с использованием Rhino+Grasshopper,</li>
+				<li>🦄 создать на ее основе ассет в Blender для использования в браузере,</li>
+				<li>
+					⭐ добавить немного магии с HTML + CSS + JavaScript, чтобы создать интерактивную сцену.
+				</li>
+		</div>
+
+        <div class="gridBigCard" style="padding: 0;">
+			<button
+				class="registerButton"
+                style='border: 1px solid black; border-bottom: none;'
+				on:click={() => {
+					popupRecordState = true;
+				}}>СМОТРЕТЬ В ЗАПИСИ</button
+			>
+		</div>
+
+	</div>
+
+	<div class="gridContainer">
+		
 
 		<div class="gridBigCard">
 			<div class="gridCardContainer">
@@ -233,7 +323,7 @@
 </footer>
 
 <style>
-	.popupContainer{
+	.popupContainer {
 		width: min(400px, calc(100% - 10px));
 		/* max-width: 800px; */
 		padding: 10px;
@@ -245,7 +335,7 @@
 		background: #f9f9f9;
 		z-index: 10;
 	}
-	.popupContainer button{
+	.popupContainer button {
 		border: none;
 		background: none;
 		cursor: pointer;
@@ -289,31 +379,18 @@
 	ul {
 		max-width: 90%;
 	}
-	video {
-		margin: 20px 0;
-		width: 100%;
-	}
 
-	.imageContainer {
-		width: 100%;
-		height: 80svh;
-		background-image: url('https://images.adsttc.com/media/images/5bec/31c3/08a5/e5a5/8c00/0693/large_jpg/6.jpg?1542205883');
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
-		/* border: 1px solid #1a1a1a; */
-		/* margin-bottom: 10px; */
-		box-sizing: border-box;
-	}
 	.canvasContainer {
 		width: 100%;
-		height: 80vh;
+		height: 100%;
 		box-sizing: border-box;
 		/* cursor: pointer; */
 		/* background: radial-gradient(circle, white, blue); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
 		filter: brightness(1.025) contrast(1.25);
 	}
-
 	.running-text-container {
 		border: 1.5px solid #1a1a1a;
 		border-bottom: none;
@@ -349,9 +426,11 @@
 	}
 
 	.gridContainer {
+		width: 100%;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		border: 1px solid #1a1a1a;
+		box-sizing: border-box;
 
 		/* color: blue; */
 	}

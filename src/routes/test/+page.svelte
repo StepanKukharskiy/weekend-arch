@@ -290,7 +290,7 @@
                 style='border: 1px solid black; border-bottom: none;'
 				on:click={() => {
 					popupRecordState = true;
-				}}>ПРИОБРЕСТИ ЗАПИСЬ</button
+				}}>СМОТРЕТЬ В ЗАПИСИ</button
 			>
 		</div>
 
