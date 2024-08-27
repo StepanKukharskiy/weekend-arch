@@ -35,14 +35,14 @@
 					/></svg
 				>
 			</button>
-			<h3>ARCHWEEKEND vol 1.0</h3>
-			<!-- <p>После оплаты мы свяжемся с Вами по указанной почте в течение 24 часов.</p>
+			<h3>ARCHWEEKEND vol 2.0</h3>
+			<p>После оплаты мы свяжемся с Вами по указанной почте в течение 24 часов.</p>
 			<a
 				class="registerButton"
-				href="https://auth.robokassa.ru/merchant/Invoice/C9VGOo0i6UumxXvV8oI8Jg">Перейти к оплате</a
-			> -->
-			<p>Запись на Arch Weekend vol 1.0 завершена.</p>
-			<a class="registerButton" href="/">Ok</a>
+				href="https://auth.robokassa.ru/merchant/Invoice/ZlE2D-Qe60KjxJ5AK_dUHg">Перейти к оплате</a
+			>
+			<!-- <p>Запись на Arch Weekend vol 1.0 завершена.</p>
+			<a class="registerButton" href="/">Ok</a> -->
 
 			<p>
 				Нажимая на кнопку «Перейти к оплате», вы соглашаетесь с <a href="/privacy-policy"
@@ -80,7 +80,7 @@
 			<p>После оплаты мы вышлем ссылку на запись на указанную почту в течение 24 часов.</p>
 			<a
 				class="registerButton"
-				href="https://auth.robokassa.ru/merchant/Invoice/C9VGOo0i6UumxXvV8oI8Jg">Перейти к оплате</a
+				href="https://auth.robokassa.ru/merchant/Invoice/6pxdSCduT0S6zjyUPQdd-A">Перейти к оплате</a
 			>
 
 			<p>
