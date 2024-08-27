@@ -1,7 +1,7 @@
 <script>
 	import photo from '$lib/images/photo.jpg';
 	import logo from '$lib/images/logo_nobg.png';
-    import viewsGIF from '$lib/images/views_2.gif';
+    import viewsGIF from '$lib/images/views_4.gif';
 	import aw1 from '$lib/images/aw1.webp';
 	import { Canvas } from '@threlte/core';
 	import Scene from '$lib/Scene.svelte';
@@ -430,6 +430,7 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		border: 1px solid #1a1a1a;
+		box-sizing: border-box;
 
 		/* color: blue; */
 	}
