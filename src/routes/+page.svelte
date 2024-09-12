@@ -1,13 +1,14 @@
 <script>
 	import photo from '$lib/images/photo.jpg';
 	import logo from '$lib/images/logo_nobg.png';
-    import viewsGIF from '$lib/images/views_4.gif';
+	import viewsGIF from '$lib/images/views_4.gif';
 	import aw1 from '$lib/images/aw1.webp';
 	import { Canvas } from '@threlte/core';
 	import Scene from '$lib/Scene.svelte';
 
 	let popupState = false;
-    let popupRecordState = false;
+	let popupRecordState = false;
+	let popupRecordId = '', popupRecordLink = '';
 </script>
 
 <main>
@@ -42,7 +43,13 @@
 				href="https://auth.robokassa.ru/merchant/Invoice/ZlE2D-Qe60KjxJ5AK_dUHg">Перейти к оплате</a
 			> -->
 			<p>Запись на ARCHWEEKEND vol 2.0 завершена.</p>
-			<a class="registerButton" href="/" on:click={()=>{popupState = false}}>Ok</a>
+			<a
+				class="registerButton"
+				href="/"
+				on:click={() => {
+					popupState = false;
+				}}>Ok</a
+			>
 
 			<!-- <p>
 				Нажимая на кнопку «Перейти к оплате», вы соглашаетесь с <a href="/privacy-policy"
@@ -52,7 +59,7 @@
 		</div>
 	{/if}
 
-    {#if popupRecordState}
+	{#if popupRecordState}
 		<div class="popupContainer">
 			<button
 				class="panelButton"
@@ -76,11 +83,11 @@
 					/></svg
 				>
 			</button>
-			<h3>ARCHWEEKEND vol 1.0</h3>
+			<h3>{popupRecordId}</h3>
 			<p>После оплаты мы вышлем ссылку на запись на указанную почту в течение 24 часов.</p>
 			<a
 				class="registerButton"
-				href="https://auth.robokassa.ru/merchant/Invoice/6pxdSCduT0S6zjyUPQdd-A">Перейти к оплате</a
+				href={popupRecordLink}>Перейти к оплате</a
 			>
 
 			<p>
@@ -96,7 +103,11 @@
 		<Canvas>
 			<Scene />
 		</Canvas> -->
-        <img src={viewsGIF} alt='views animation' style='margin-bottom: 20px; width: 100%; max-width: 800px;'/>
+		<img
+			src={viewsGIF}
+			alt="views animation"
+			style="margin-bottom: 20px; width: 100%; max-width: 800px;"
+		/>
 	</div>
 	<!-- <div class="imageContainer"></div> -->
 
@@ -165,7 +176,10 @@
 				<ul class="noDots">
 					<li>👀 научиться работать с данными OSM,</li>
 					<li>🐆 разработать алгоритм анализа видимости на плане участка и здания,</li>
-					<li>🦄 разобраться с генеративными алгоритмами построения формы здания с учетом наилучшей видимости,</li>
+					<li>
+						🦄 разобраться с генеративными алгоритмами построения формы здания с учетом наилучшей
+						видимости,
+					</li>
 					<li>
 						⭐ добавить немного магии с HTML + CSS + JavaScript, чтобы создать интерактивную карту.
 					</li>
@@ -180,7 +194,7 @@
 					<li>Основы моделирования в Grasshopper</li>
 					<li>Использование плагина Elk 2 и работа с OSM данными</li>
 					<li>Анализ видимости с помощью IsoVist</li>
-                    <li>Работа с эволюционными алгоритмами и Galapagos</li>
+					<li>Работа с эволюционными алгоритмами и Galapagos</li>
 				</ul>
 			</div>
 		</div>
@@ -245,7 +259,7 @@
 			</div>
 		</div>
 
-        <div class="gridBigCard" style="padding: 0;">
+		<div class="gridBigCard" style="padding: 0;">
 			<button
 				class="registerButton"
 				on:click={() => {
@@ -262,15 +276,51 @@
 			</div>
 		</div>
 	</div>
-	<div class="gridContainer" style="border: none;">
 
-			<div class="gridCardContainer" style='width: 100%; position: static;'>
-					<!-- <Canvas>
+	<div class="gridContainer" style="border: none;">
+		<div class="gridCardContainer" style="width: 100%; position: static; box-sizing: border-box;">
+			<!-- <Canvas>
+					<Scene />
+				</Canvas> -->
+			<img src={viewsGIF} alt="archweekend 2" style="width: 100%; " />
+		</div>
+
+		<div class="gridCardContainer">
+			<p><b>ARCH WEEKEND vol 2.0</b></p>
+			<p>В этот раз мы встретились, чтобы:</p>
+			<ul class="noDots">
+				<li>👀 научиться работать с данными OSM,</li>
+				<li>🐆 разработать алгоритм анализа видимости на плане участка и здания,</li>
+				<li>
+					🦄 разобраться с генеративными алгоритмами построения формы здания с учетом наилучшей
+					видимости,
+				</li>
+				<li>
+					⭐ добавить немного магии с HTML + CSS + JavaScript, чтобы создать интерактивную карту.
+				</li>
+			</ul>
+		</div>
+
+		<div class="gridBigCard" style="padding: 0;">
+			<button
+				class="registerButton"
+				style="border: 1px solid black; border-bottom: none;"
+				on:click={() => {
+					popupRecordState = true;
+					popupRecordId = 'ARCHWEEKEND vol 2.0';
+					popupRecordLink = 'https://auth.robokassa.ru/merchant/Invoice/GQfUb85jhUu4Gcrsr4nQOg'
+				}}>СМОТРЕТЬ В ЗАПИСИ</button
+			>
+		</div>
+	</div>
+
+	<div class="gridContainer" style="border: none;">
+		<div class="gridCardContainer" style="width: 100%; position: static;">
+			<!-- <Canvas>
 						<Scene />
 					</Canvas> -->
-					<img src={aw1} alt='archweekend 1' style='width: 100%;' />
-			</div>
-
+			<img src={aw1} alt="archweekend 1" style="width: 100%;" />
+		</div>
 
 		<div class="gridCardContainer">
 			<p><b>ARCH WEEKEND vol 1.0</b></p>
@@ -282,23 +332,23 @@
 				<li>
 					⭐ добавить немного магии с HTML + CSS + JavaScript, чтобы создать интерактивную сцену.
 				</li>
+			</ul>
 		</div>
 
-        <div class="gridBigCard" style="padding: 0;">
+		<div class="gridBigCard" style="padding: 0;">
 			<button
 				class="registerButton"
-                style='border: 1px solid black; border-bottom: none;'
+				style="border: 1px solid black; border-bottom: none;"
 				on:click={() => {
 					popupRecordState = true;
+					popupRecordId = 'ARCHWEEKEND vol 1.0';
+					popupRecordLink = 'https://auth.robokassa.ru/merchant/Invoice/Vs6zRnPt2kaKtr8l1NpYBQ';
 				}}>СМОТРЕТЬ В ЗАПИСИ</button
 			>
 		</div>
-
 	</div>
 
 	<div class="gridContainer">
-		
-
 		<div class="gridBigCard">
 			<div class="gridCardContainer">
 				<h3>Мы на связи:</h3>
@@ -386,9 +436,9 @@
 		box-sizing: border-box;
 		/* cursor: pointer; */
 		/* background: radial-gradient(circle, white, blue); */
-        display: flex;
-        justify-content: center;
-        align-items: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		filter: brightness(1.025) contrast(1.25);
 	}
 	.running-text-container {
