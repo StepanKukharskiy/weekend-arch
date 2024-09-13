@@ -309,7 +309,7 @@
 					popupRecordState = true;
 					popupRecordId = 'ARCHWEEKEND vol 2.0';
 					popupRecordLink = 'https://auth.robokassa.ru/merchant/Invoice/GQfUb85jhUu4Gcrsr4nQOg'
-				}}>СМОТРЕТЬ В ЗАПИСИ</button
+				}}>СМОТРЕТЬ AW vol 2.0 В ЗАПИСИ</button
 			>
 		</div>
 	</div>
@@ -343,7 +343,7 @@
 					popupRecordState = true;
 					popupRecordId = 'ARCHWEEKEND vol 1.0';
 					popupRecordLink = 'https://auth.robokassa.ru/merchant/Invoice/Vs6zRnPt2kaKtr8l1NpYBQ';
-				}}>СМОТРЕТЬ В ЗАПИСИ</button
+				}}>СМОТРЕТЬ AW vol 1.0 В ЗАПИСИ</button
 			>
 		</div>
 	</div>
