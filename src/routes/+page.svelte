@@ -37,26 +37,26 @@
 					/></svg
 				>
 			</button>
-			<h3>ARCHWEEKEND vol 2.0</h3>
-			<!-- <p>После оплаты мы свяжемся с Вами по указанной почте в течение 24 часов.</p>
+			<h3>ARCHWEEKEND vol 3.0</h3>
+			<p>После оплаты мы свяжемся с Вами по указанной почте в течение 24 часов.</p>
 			<a
 				class="registerButton"
-				href="https://auth.robokassa.ru/merchant/Invoice/ZlE2D-Qe60KjxJ5AK_dUHg">Перейти к оплате</a
-			> -->
-			<p>Запись на ARCHWEEKEND vol 2.0 завершена.</p>
+				href="https://auth.robokassa.ru/merchant/Invoice/aorsA_hP3kCgl5PL-Uvu5Q">Перейти к оплате</a
+			>
+			<!-- <p>Запись на ARCHWEEKEND vol 2.0 завершена.</p>
 			<a
 				class="registerButton"
 				href="/"
 				on:click={() => {
 					popupState = false;
 				}}>Ok</a
-			>
+			> -->
 
-			<!-- <p>
+			<p>
 				Нажимая на кнопку «Перейти к оплате», вы соглашаетесь с <a href="/privacy-policy"
 					>политикой обработки персональных данных</a
 				>.
-			</p> -->
+			</p>
 		</div>
 	{/if}
 
@@ -118,7 +118,7 @@
 
 	<div class="gridContainer">
 		<div class="gridSmallCard">
-			<h3>6 октября, 11:00-15:00 GMT+3</h3>
+			<h3>13 октября, 11:00-15:00 GMT+3</h3>
 		</div>
 		<div class="gridSmallCard">
 			<h3>online + запись</h3>
@@ -168,7 +168,7 @@
 	<div class="gridContainer">
 		<div class="gridSmallCard">
 			<div class="gridCardContainer">
-				<h3>ARCHWEEKEND vol 2.0</h3>
+				<h3>ARCHWEEKEND vol 3.0</h3>
 			</div>
 		</div>
 		<div class="gridSmallCard">
