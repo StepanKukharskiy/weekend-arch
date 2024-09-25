@@ -239,11 +239,11 @@
 	<div class="gridContainer">
 		<div class="gridSmallCard" style="justify-content: start; align-items: start;">
 			<div class="gridCardContainer">
-				<h3>Для кого</h3>
+				<h3>Кому подойдет?</h3>
 				<ul>
-					<li>для новичков</li>
-					<li>для тех, кто начал изучать Rhino</li>
-					<li>для всех, кто хочет разобраться с основами работы в HTML, CSS, JavaScript.</li>
+					<li>Художникам — научитесь использовать код для создания проектов,</li>
+					<li>Дизайнерам — освоите новый инструмент и вдохновитесь,</li>
+					<li>Разработчикам — прокачаете скиллы в области графики и фронтенда.</li>
 				</ul>
 			</div>
 		</div>
@@ -535,8 +535,8 @@
 		box-sizing: border-box;
 	}
 	.curatorTextContainer img {
-		/* width: 80%; */
-		max-width: 300px;
+		width: 70%;
+		max-width: 250px;
 	}
 	.curatorTextContainer p {
 		margin: 0;
