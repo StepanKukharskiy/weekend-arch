@@ -280,7 +280,7 @@
 	</div>
 
 	<div class="gridContainer" style="border: none;">
-		<div class="gridCardContainer" style="width: 100%; position: static; box-sizing: border-box;">
+		<div class="gridCardContainer" style="position: static; box-sizing: border-box;">
 			<!-- <Canvas>
 					<Scene />
 				</Canvas> -->
@@ -317,7 +317,7 @@
 	</div>
 
 	<div class="gridContainer" style="border: none;">
-		<div class="gridCardContainer" style="width: 100%; position: static;">
+		<div class="gridCardContainer" style="position: static;">
 			<!-- <Canvas>
 						<Scene />
 					</Canvas> -->
