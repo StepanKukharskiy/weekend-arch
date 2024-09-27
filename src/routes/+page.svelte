@@ -41,7 +41,7 @@
 			<p>После оплаты мы свяжемся с Вами по указанной почте в течение 24 часов.</p>
 			<a
 				class="registerButton"
-				href="https://auth.robokassa.ru/merchant/Invoice/aorsA_hP3kCgl5PL-Uvu5Q">Перейти к оплате</a
+				href="https://auth.robokassa.ru/merchant/Invoice/a2Bk3Q6Dwk6V61C3nFR34Q">Перейти к оплате</a
 			>
 			<!-- <p>Запись на ARCHWEEKEND vol 2.0 завершена.</p>
 			<a
