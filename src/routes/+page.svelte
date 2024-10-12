@@ -38,25 +38,25 @@
 				>
 			</button>
 			<h3>ARCHWEEKEND vol 3.0</h3>
-			<p>После оплаты мы свяжемся с Вами по указанной почте в течение 24 часов.</p>
+			<!-- <p>После оплаты мы свяжемся с Вами по указанной почте в течение 24 часов.</p>
 			<a
 				class="registerButton"
 				href="https://auth.robokassa.ru/merchant/Invoice/a2Bk3Q6Dwk6V61C3nFR34Q">Перейти к оплате</a
-			>
-			<!-- <p>Запись на ARCHWEEKEND vol 2.0 завершена.</p>
+			> -->
+			<p>Запись на ARCHWEEKEND vol 3.0 завершена.</p>
 			<a
 				class="registerButton"
 				href="/"
 				on:click={() => {
 					popupState = false;
 				}}>Ok</a
-			> -->
+			>
 
-			<p>
+			<!-- <p>
 				Нажимая на кнопку «Перейти к оплате», вы соглашаетесь с <a href="/privacy-policy"
 					>политикой обработки персональных данных</a
 				>.
-			</p>
+			</p> -->
 		</div>
 	{/if}
 
