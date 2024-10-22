@@ -281,11 +281,52 @@
 
 	<div class="gridContainer" style="border: none;">
 		<div class="gridCardContainer" style="position: static; box-sizing: border-box;">
+			
+			<img src={aw3} alt="archweekend 2" style="width: 100%; " />
+		</div>
+
+		
+
+		<div class="gridCardContainer">
+			<p><b>ARCH WEEKEND vol 3.0</b></p>
+			<p>В этот раз мы встретились, чтобы:</p>
+			<ul class="noDots">
+				<li>👀 посмотреть примеры генеративного арта и научиться его делать,</li>
+					<li>🐆 понять основы работы в браузере с HTML + CSS + JavaScript,</li>
+					<li>
+						🦄 создать 2D и 3D интерактивные проекты с библиотеками p5.js, three.js,
+					</li>
+					<li>
+						💫 разобраться, как использовать векторные поля в своих проектах, сделать алгоритм flow field в 2D и 3D,
+					</li>
+					<li>
+						⭐ сделать несколько проектов, которые усилят портфолио.
+					</li>
+			</ul>
+		</div>
+
+		<div class="gridBigCard" style="padding: 0;">
+			<button
+				class="registerButton"
+				style="border: 1px solid black; border-bottom: none;"
+				on:click={() => {
+					popupRecordState = true;
+					popupRecordId = 'ARCHWEEKEND vol 3.0';
+					popupRecordLink = 'https://auth.robokassa.ru/merchant/Invoice/Hncv_BgqG0a3aDf2sXdCJQ'
+				}}>СМОТРЕТЬ AW vol 3.0 В ЗАПИСИ</button
+			>
+		</div>
+	</div>
+
+	<div class="gridContainer" style="border: none;">
+		<div class="gridCardContainer" style="position: static; box-sizing: border-box;">
 			<!-- <Canvas>
 					<Scene />
 				</Canvas> -->
 			<img src={viewsGIF} alt="archweekend 2" style="width: 100%; " />
 		</div>
+
+
 
 		<div class="gridCardContainer">
 			<p><b>ARCH WEEKEND vol 2.0</b></p>
