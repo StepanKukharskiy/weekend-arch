@@ -85,7 +85,7 @@
 				>
 			</button>
 			<h3>{popupRecordId}</h3>
-			<p>После оплаты мы вышлем ссылку на запись на указанную почту в течение 24 часов.</p>
+			<p>После оплаты мы свяжемся по указанной почте в течение 24 часов.</p>
 			<a
 				class="registerButton"
 				href={popupRecordLink}>Перейти к оплате</a
@@ -387,6 +387,20 @@
 					popupRecordId = 'ARCHWEEKEND vol 1.0';
 					popupRecordLink = 'https://auth.robokassa.ru/merchant/Invoice/Vs6zRnPt2kaKtr8l1NpYBQ';
 				}}>СМОТРЕТЬ AW vol 1.0 В ЗАПИСИ</button
+			>
+		</div>
+	</div>
+
+	<div class='gridContainer'>
+		<div class="gridBigCard" style="padding: 0;">
+			<button
+				class="registerButton"
+				style="border: 0px solid black; border-bottom: none;"
+				on:click={() => {
+					popupRecordState = true;
+					popupRecordId = 'Консультация';
+					popupRecordLink = 'https://auth.robokassa.ru/merchant/Invoice/52Tb1LDG0EGVyIpICLeoFw';
+				}}>КОНСУЛЬТАЦИЯ</button
 			>
 		</div>
 	</div>
