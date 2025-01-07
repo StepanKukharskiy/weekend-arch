@@ -277,6 +277,17 @@
 				<h3>Прошедшие интенсивы</h3>
 			</div>
 		</div>
+		<div class="gridBigCard" style="padding: 0;">
+			<button
+				class="registerButton"
+				style="border: 1px solid black;"
+				on:click={() => {
+					popupRecordState = true;
+					popupRecordId = 'ARCHWEEKEND vol 1.0, 2.0, 3.0';
+					popupRecordLink = 'https://auth.robokassa.ru/merchant/Invoice/bC29u9d5hEiRo-XHrkcJDQ'
+				}}>🎁 СМОТРЕТЬ ВСЕ AW В ЗАПИСИ 🎁</button
+			>
+		</div>
 	</div>
 
 	<div class="gridContainer" style="border: none;">
