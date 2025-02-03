@@ -4,12 +4,14 @@
 	import viewsGIF from '$lib/images/views_4.gif';
 	import aw1 from '$lib/images/aw1.webp';
 	import aw3 from '$lib/images/AW3_2.gif';
+	import game from '$lib/images/game-loop2.mp4';
 	import { Canvas } from '@threlte/core';
 	import Scene from '$lib/Scene.svelte';
 
 	let popupState = false;
 	let popupRecordState = false;
-	let popupRecordId = '', popupRecordLink = '';
+	let popupRecordId = '',
+		popupRecordLink = '';
 </script>
 
 <main>
@@ -37,26 +39,26 @@
 					/></svg
 				>
 			</button>
-			<h3>ARCHWEEKEND vol 3.0</h3>
-			<!-- <p>После оплаты мы свяжемся с Вами по указанной почте в течение 24 часов.</p>
+			<h3>ARCHWEEKEND vol 4.0</h3>
+			<p>После оплаты мы свяжемся с Вами по указанной почте в течение 24 часов.</p>
 			<a
 				class="registerButton"
-				href="https://auth.robokassa.ru/merchant/Invoice/a2Bk3Q6Dwk6V61C3nFR34Q">Перейти к оплате</a
-			> -->
-			<p>Запись на ARCHWEEKEND vol 3.0 завершена.</p>
+				href="https://auth.robokassa.ru/merchant/Invoice/DQ2MnwgGiUSfzpzEc10QPw">Перейти к оплате</a
+			>
+			<!-- <p>Запись на ARCHWEEKEND vol 3.0 завершена.</p>
 			<a
 				class="registerButton"
 				href="/"
 				on:click={() => {
 					popupState = false;
 				}}>Ok</a
-			>
+			> -->
 
-			<!-- <p>
+			<p>
 				Нажимая на кнопку «Перейти к оплате», вы соглашаетесь с <a href="/privacy-policy"
 					>политикой обработки персональных данных</a
 				>.
-			</p> -->
+			</p>
 		</div>
 	{/if}
 
@@ -86,10 +88,7 @@
 			</button>
 			<h3>{popupRecordId}</h3>
 			<p>После оплаты мы свяжемся по указанной почте в течение 24 часов.</p>
-			<a
-				class="registerButton"
-				href={popupRecordLink}>Перейти к оплате</a
-			>
+			<a class="registerButton" href={popupRecordLink}>Перейти к оплате</a>
 
 			<p>
 				Нажимая на кнопку «Перейти к оплате», вы соглашаетесь с <a href="/privacy-policy"
@@ -104,11 +103,18 @@
 		<Canvas>
 			<Scene />
 		</Canvas> -->
-		<img
+		{#if game}
+			<video src={game} style="width: 100%; border: 1.5px solid black; border-bottom: none; box-sizing: border-box;" autoplay={true} loop={true}>
+
+			</video>
+		{:else}
+			<p style="width: 100%">loading</p>
+		{/if}
+		<!-- <img
 			src={aw3}
 			alt="views animation"
 			style="margin-bottom: 20px; width: 100%; max-width: 800px;"
-		/>
+		/> -->
 	</div>
 	<!-- <div class="imageContainer"></div> -->
 
@@ -118,7 +124,7 @@
 
 	<div class="gridContainer">
 		<div class="gridSmallCard">
-			<h3>13 октября, 11:00-15:00 GMT+3</h3>
+			<h3>15 февраля, 11:00-15:00 GMT+3</h3>
 		</div>
 		<div class="gridSmallCard">
 			<h3>online + запись</h3>
@@ -168,24 +174,20 @@
 	<div class="gridContainer">
 		<div class="gridSmallCard">
 			<div class="gridCardContainer">
-				<h3>ARCHWEEKEND vol 3.0</h3>
+				<h3>ARCHWEEKEND vol 4.0</h3>
 			</div>
 		</div>
 		<div class="gridSmallCard">
 			<div class="gridCardContainer">
-				<p><b>В этот раз мы встретимся, чтобы:</b></p>
+				<p><b>Что будем делать?</b></p>
 				<ul class="noDots">
-					<li>👀 посмотреть примеры генеративного арта и научиться его делать,</li>
-					<li>🐆 понять основы работы в браузере с HTML + CSS + JavaScript,</li>
+					<li>👀 посмотрим примеры уютных и культовых видеоигр					</li>
+					<li>◼️ разберем игровые механики, систему прогрессии и баланс игры</li>
+					<li>🐆 разберем основы работы в браузере с HTML + CSS + JavaScript					</li>
 					<li>
-						🦄 создать 2D и 3D интерактивные проекты с библиотеками p5.js, three.js,
+						🦄 сделаем 2D игру
 					</li>
-					<li>
-						💫 разобраться, как использовать векторные поля в своих проектах, сделать алгоритм flow field в 2D и 3D,
-					</li>
-					<li>
-						⭐ сделать несколько проектов, которые усилят портфолио.
-					</li>
+					<li>⭐ расскажем, как кастомизировать игру с помощью нейронок и выпустить игру в физический мир					</li>
 				</ul>
 			</div>
 		</div>
@@ -194,10 +196,12 @@
 			<div class="gridCardContainer">
 				<h3>Часть 1</h3>
 				<ul>
-					<li>Основы работы с HTML, CSS, JavaScript</li>
-					<li>Основы работы с библиотекой p5.js</li>
+					<li>Разберём, как устроены уютные градостроительные симуляторы, какие механики делают их комфортными и почему в них так приятно проводить время</li>
+					<li>Рассмотрим Minami Lane, Townscaper, Tiny Glade и другие примеры жанра, чтобы понять, какие элементы формируют их геймплей и атмосферу</li>
+					<li>Обсудим, как создаётся их уникальный стиль, как устроена система прогрессии (а иногда её отсутствие) и каким образом разработчики находят баланс между творческой свободой и вовлечённостью игрока</li>
+					<!-- <li>Основы работы с библиотекой p5.js</li>
 					<li>Генерация 2D композиций из простых геометрических фигур с p5.js</li>
-					<li>2D Flow Field с p5.js</li>
+					<li>2D Flow Field с p5.js</li> -->
 				</ul>
 			</div>
 		</div>
@@ -206,8 +210,10 @@
 			<div class="gridCardContainer">
 				<h3>Часть 2</h3>
 				<ul>
-					<li>Основы работы с библиотекой three.js</li>
-					<li>Векторные поля и 3D Flow Field с three.js</li>
+					<li>Основы работы с HTML, CSS, JavaScript</li>
+					<li>Работа с кодом игры</li>
+					<li>Кастомизация с помощью нейронок</li>
+					<!-- <li>Векторные поля и 3D Flow Field с three.js</li> -->
 				</ul>
 			</div>
 		</div>
@@ -255,7 +261,7 @@
 					<li>наличие ноутбука или ПК с выходом в интернет</li>
 					<!-- <li>установленные Rhino, Grasshopper, Elk 2</li> -->
 					<li>
-						регистрация на платформе <a href="https://kodiia.com" target="_blank">Kodiia.com</a>
+						регистрация на платформе <a href="https://kodiia.com" target="_blank">Kodiia.me</a>
 					</li>
 				</ul>
 			</div>
@@ -274,7 +280,7 @@
 	<div class="gridContainer" style="border: none;">
 		<div class="gridBigCard" style="border: none; padding-top: 10px;">
 			<div class="gridCardContainer">
-				<h3>Прошедшие интенсивы</h3>
+				<h3 style='margin-top: 50px;'>Прошедшие интенсивы</h3>
 			</div>
 		</div>
 		<div class="gridBigCard" style="padding: 0;">
@@ -284,7 +290,7 @@
 				on:click={() => {
 					popupRecordState = true;
 					popupRecordId = 'ARCHWEEKEND vol 1.0, 2.0, 3.0';
-					popupRecordLink = 'https://auth.robokassa.ru/merchant/Invoice/bC29u9d5hEiRo-XHrkcJDQ'
+					popupRecordLink = 'https://auth.robokassa.ru/merchant/Invoice/bC29u9d5hEiRo-XHrkcJDQ';
 				}}>🎁 СМОТРЕТЬ ВСЕ AW В ЗАПИСИ 🎁</button
 			>
 		</div>
@@ -292,27 +298,21 @@
 
 	<div class="gridContainer" style="border: none;">
 		<div class="gridCardContainer" style="position: static; box-sizing: border-box;">
-			
 			<img src={aw3} alt="archweekend 2" style="width: 100%; " />
 		</div>
-
-		
 
 		<div class="gridCardContainer">
 			<p><b>ARCH WEEKEND vol 3.0</b></p>
 			<p>В этот раз мы встретились, чтобы:</p>
 			<ul class="noDots">
 				<li>👀 посмотреть примеры генеративного арта и научиться его делать,</li>
-					<li>🐆 понять основы работы в браузере с HTML + CSS + JavaScript,</li>
-					<li>
-						🦄 создать 2D и 3D интерактивные проекты с библиотеками p5.js, three.js,
-					</li>
-					<li>
-						💫 разобраться, как использовать векторные поля в своих проектах, сделать алгоритм flow field в 2D и 3D,
-					</li>
-					<li>
-						⭐ сделать несколько проектов, которые усилят портфолио.
-					</li>
+				<li>🐆 понять основы работы в браузере с HTML + CSS + JavaScript,</li>
+				<li>🦄 создать 2D и 3D интерактивные проекты с библиотеками p5.js, three.js,</li>
+				<li>
+					💫 разобраться, как использовать векторные поля в своих проектах, сделать алгоритм flow
+					field в 2D и 3D,
+				</li>
+				<li>⭐ сделать несколько проектов, которые усилят портфолио.</li>
 			</ul>
 		</div>
 
@@ -323,7 +323,7 @@
 				on:click={() => {
 					popupRecordState = true;
 					popupRecordId = 'ARCHWEEKEND vol 3.0';
-					popupRecordLink = 'https://auth.robokassa.ru/merchant/Invoice/Hncv_BgqG0a3aDf2sXdCJQ'
+					popupRecordLink = 'https://auth.robokassa.ru/merchant/Invoice/Hncv_BgqG0a3aDf2sXdCJQ';
 				}}>СМОТРЕТЬ AW vol 3.0 В ЗАПИСИ</button
 			>
 		</div>
@@ -336,8 +336,6 @@
 				</Canvas> -->
 			<img src={viewsGIF} alt="archweekend 2" style="width: 100%; " />
 		</div>
-
-
 
 		<div class="gridCardContainer">
 			<p><b>ARCH WEEKEND vol 2.0</b></p>
@@ -362,7 +360,7 @@
 				on:click={() => {
 					popupRecordState = true;
 					popupRecordId = 'ARCHWEEKEND vol 2.0';
-					popupRecordLink = 'https://auth.robokassa.ru/merchant/Invoice/GQfUb85jhUu4Gcrsr4nQOg'
+					popupRecordLink = 'https://auth.robokassa.ru/merchant/Invoice/GQfUb85jhUu4Gcrsr4nQOg';
 				}}>СМОТРЕТЬ AW vol 2.0 В ЗАПИСИ</button
 			>
 		</div>
@@ -402,8 +400,8 @@
 		</div>
 	</div>
 
-	<div class='gridContainer'>
-		<div class="gridBigCard" style="padding: 0;">
+	<div class="gridContainer">
+		<div class="gridBigCard" style="padding: 0; border-top: none; border-bottom: none;">
 			<button
 				class="registerButton"
 				style="border: 0px solid black; border-bottom: none;"
