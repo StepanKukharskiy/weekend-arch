@@ -70,7 +70,7 @@
 	const modals = {
 		register: {
 			title: 'ГАЙД ПО AI для архитекторов',
-			text: 'Регистрация временно закрыта. Следующий поток стартует в марте 2025.',
+			text: 'Регистрация скоро откроется.',
 			link: '#',
 			linkText: 'OK'
 		}
@@ -85,18 +85,18 @@
 
 <style>
 	:global(body) {
-		--color-bg: #0a0a0a;
+		--color-bg: #f9f9f9;
 		--color-surface: rgba(255, 255, 255, 0.03);
 		--color-glass: rgba(255, 255, 255, 0.08);
 		--color-glass-border: rgba(255, 255, 255, 0.12);
-		--color-text: #f5f5f5;
-		--color-text-secondary: #a0a0a0;
+		--color-text: #1a1a1a;
+		--color-text-secondary: #1a1a1a;
 		--color-border: rgba(255, 255, 255, 0.1);
-		--color-blue-50: rgba(0, 102, 255, 0.1);
-		--color-blue-500: #0066ff;
-		--color-blue-600: #0052cc;
-		--color-blue-700: #0047b3;
-		--color-blue-glow: rgba(0, 102, 255, 0.2);
+		--color-blue-50: rgba(0, 0, 255, 0.1);
+		--color-blue-500: #0000eb;
+		--color-blue-600: #0000eb;
+		--color-blue-700: #0000eb;
+		--color-blue-glow: rgba(0, 0, 255, 0.2);
 		--font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 		--shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.4);
 		--shadow-glow: 0 0 40px var(--color-blue-glow);
@@ -143,13 +143,17 @@
 		box-sizing: border-box;
 	}
 
+	p, span, li{
+		font-weight: 500;
+	}
+
 	/* Sticky Navigation */
 	.sticky-nav {
 		position: fixed;
 		top: 0;
 		left: 0;
 		right: 0;
-		background: rgba(10, 10, 10, 0.8);
+		background: rgba(255, 255, 255, 0.5);
 		backdrop-filter: blur(24px);
 		-webkit-backdrop-filter: blur(24px);
 		border-bottom: 1px solid var(--color-glass-border);
@@ -255,7 +259,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(rgba(10, 10, 50, 0.65), rgba(10, 10, 10)); /* Dark overlay */
+        background: linear-gradient(rgba(10, 10, 250, 0.25), rgba(250, 250, 250) 75%); /* Dark overlay */
         z-index: 0;
     }
 
@@ -305,7 +309,7 @@
 		letter-spacing: -0.03em;
 		color: var(--color-text);
 		animation: fadeInUp 0.8s ease forwards;
-		background: linear-gradient(135deg, #ffffff 0%, var(--color-blue-500) 100%);
+		background: linear-gradient(135deg, #0000eb 0%, var(--color-blue-500) 100%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
@@ -556,6 +560,7 @@
 
 	/* Highlight Card */
 	.highlight-card {
+		max-width: 1200px;
 		background: var(--color-glass-strong);
 		backdrop-filter: blur(24px);
 		-webkit-backdrop-filter: blur(24px);
@@ -566,6 +571,10 @@
 		box-shadow: var(--shadow-glass), 0 0 80px rgba(0, 102, 255, 0.15);
 		position: relative;
 		overflow: hidden;
+	}
+
+	.highlight-card p{
+		text-align: left;
 	}
 
 	.highlight-card::before {
@@ -1175,6 +1184,19 @@
 					решений.
 				</p>
 			</div>
+		</div>
+	</section>
+
+	<!-- Registration Section -->
+	<section id="intro_vid" class="scroll-section">
+		<h2 class="section-title">Введение</h2>
+		<div class="highlight-card">
+			<iframe
+				src="https://player.mux.com/KEwmiM2Gs02c7oIacWMK4JUixwwj4WKvCTYDsMnif6no?metadata-video-title=lesson+1&video-title=lesson+1&accent-color=%230000ff"
+				style="width: 100%; border: none; aspect-ratio: 16/9;"
+				allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+				allowfullscreen
+			></iframe>
 		</div>
 	</section>
 
