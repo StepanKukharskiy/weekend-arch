@@ -1190,7 +1190,7 @@
         </section>
 
         <!-- Past Courses Section -->
-        <section id="past" class="scroll-section">
+        <!-- <section id="past" class="scroll-section">
             <h2 class="section-title">Прошедшие ARCH WEEKEND</h2>
             <p class="section-subtitle">Смотрите записи предыдущих интенсивов</p>
 
@@ -1243,7 +1243,7 @@
             <div style="text-align: center; margin-top: 40px;">
                 <button class="hero-cta" onclick="openModal('bundle')">🎁 Все AW в записи со скидкой</button>
             </div>
-        </section>
+        </section> -->
 
   <!-- Registration Section -->
   <section id="register" class="scroll-section">
