@@ -91,13 +91,16 @@
     --color-text: #f5f5f5;
     --color-text-secondary: #a0a0a0;
     --color-border: rgba(255, 255, 255, 0.1);
-    --color-blue-50: rgba(0, 100, 255, 0.1);
+    --color-yellow: #FFD54F;
+    --color-yellow-glow: rgba(255, 213, 79, 0.2);
+    --color-coral: #FF9E9E;
+    --color-coral-glow: rgba(255, 158, 158, 0.2);
     --color-blue-500: #0066ff;
-    --color-blue-600: #0052cc;
-    --color-blue-700: #0047b3;
-    --color-accent: #ff6b35;
+    --color-blue-glow: rgba(0, 102, 255, 0.2);
+    --color-accent: #FF9E9E;
     --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --shadow-glow: 0 0 40px var(--color-yellow-glow);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     margin: 0 !important;
     padding: 0 !important;
@@ -181,11 +184,11 @@
   }
 
   .sticky-nav a:hover {
-    color: var(--color-blue-500);
+    color: var(--color-yellow);
   }
 
   .sticky-nav .nav-cta {
-    background: var(--color-blue-500);
+    background: linear-gradient(135deg, var(--color-yellow) 0%, var(--color-coral) 100%);
     color: white;
     padding: 10px 24px;
     border-radius: 8px;
@@ -194,9 +197,9 @@
   }
 
   .sticky-nav .nav-cta:hover {
-    background: var(--color-blue-600);
+    background: linear-gradient(135deg, #FFE082 0%, #FFAB91 100%);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 102, 255, 0.4);
+    box-shadow: 0 6px 20px var(--color-yellow-glow);
   }
 
         /* Container */
@@ -264,6 +267,20 @@
             transform: rotate(360deg);
         }
 
+  .hero-logo-img {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 32px;
+    display: block;
+    animation: fadeInUp 0.8s ease forwards, float 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 30px var(--color-yellow-glow));
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
   .hero h1 {
     font-size: clamp(2.5rem, 6vw, 5rem);
     font-weight: 700;
@@ -272,7 +289,7 @@
     letter-spacing: -0.03em;
     color: var(--color-text);
     animation: fadeInUp 0.8s ease forwards;
-    background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
+    background: linear-gradient(135deg, var(--color-yellow) 0%, var(--color-coral) 50%, #ffffff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -305,7 +322,10 @@
         .stat-number {
             font-size: 2.5rem;
             font-weight: 700;
-            color: var(--color-blue-500);
+            background: linear-gradient(135deg, var(--color-yellow) 0%, var(--color-coral) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             display: block;
         }
 
@@ -319,18 +339,18 @@
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    background: var(--color-blue-500);
-    color: white;
+    background: linear-gradient(135deg, var(--color-yellow) 0%, var(--color-coral) 100%);
+    color: #0a0a0a;
     padding: 20px 48px;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 700;
     border: none;
     border-radius: 12px;
     cursor: pointer;
     transition: var(--transition);
     text-decoration: none;
     animation: fadeInUp 0.8s ease 0.6s forwards;
-    box-shadow: 0 8px 24px rgba(0, 102, 255, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+    box-shadow: 0 8px 32px var(--color-yellow-glow), 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
     position: relative;
     overflow: hidden;
   }
@@ -356,9 +376,9 @@
   }
 
   .hero-cta:hover {
-    background: var(--color-blue-600);
-    transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(0, 102, 255, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+    background: linear-gradient(135deg, #FFE082 0%, #FFAB91 100%);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 48px var(--color-yellow-glow), 0 0 60px var(--color-coral-glow), 0 0 0 1px rgba(255, 255, 255, 0.3) inset;
   }
 
         /* Video Section */
@@ -440,7 +460,10 @@
             font-size: clamp(2rem, 4vw, 3rem);
             font-weight: 700;
             margin-bottom: 16px;
-            color: var(--color-blue-500);
+            background: linear-gradient(135deg, var(--color-yellow) 0%, var(--color-coral) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             text-align: center;
         }
 
@@ -526,7 +549,8 @@
     background: var(--color-glass-strong);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(0, 102, 255, 0.3);
+    border: 2px solid;
+    border-image: linear-gradient(135deg, var(--color-yellow) 0%, var(--color-coral) 100%) 1;
     padding: 60px 48px;
     border-radius: 24px;
     text-align: center;
@@ -696,7 +720,8 @@
             width: 100%;
             padding: 16px;
             background: transparent;
-            border: 1.5px solid var(--color-blue-500);
+            border: 2px solid;
+            border-image: linear-gradient(135deg, var(--color-yellow) 0%, var(--color-coral) 100%) 1;
             color: var(--color-blue-500);
             font-size: 1.1rem;
             font-weight: 600;
@@ -709,8 +734,9 @@
         }
 
         .btn-secondary:hover {
-            background: var(--color-blue-500);
-            color: white;
+            background: linear-gradient(135deg, var(--color-yellow) 0%, var(--color-coral) 100%);
+            color: #0a0a0a;
+            border-image: none;
         }
 
         /* Contact */
@@ -740,9 +766,10 @@
         }
 
         .contact-item a:hover {
-            border-color: var(--color-blue-500);
-            color: var(--color-blue-500);
+            border-color: var(--color-yellow);
+            color: var(--color-yellow);
             transform: translateY(-2px);
+            box-shadow: 0 4px 20px var(--color-yellow-glow);
         }
 
   /* Footer */
@@ -771,7 +798,7 @@
         }
 
         .footer-links a:hover {
-            color: var(--color-blue-500);
+            color: var(--color-coral);
         }
 
         .footer-copy {
@@ -1002,7 +1029,7 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-logo" style="background-image: url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='none' stroke='%230000FF' stroke-width='2'/%3E%3Ctext x='50' y='60' font-size='40' font-weight='bold' fill='%230000FF' text-anchor='middle'%3ESA%3C/text%3E%3C/svg%3E);"></div>
+        <img src={logo} alt="SA lab" class="hero-logo-img" />
 
         <h1>ГАЙД ПО AI<br>для архитекторов</h1>
 
