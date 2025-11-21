@@ -106,7 +106,8 @@
 		background: var(--color-bg) !important;
 		color: var(--color-text) !important;
 		font-family: var(--font-sans) !important;
-		line-height: 1.7 !important;
+		/* Updated line-height for better density */
+		line-height: 1.6 !important; 
 		overflow-x: hidden !important;
 		display: block !important;
 		align-items: unset !important;
@@ -223,8 +224,27 @@
 		padding: 80px 20px 60px;
 		position: relative;
 		overflow: hidden;
-		/* background: radial-gradient(ellipse at top, rgba(0, 102, 255, 0.1), transparent 50%); */
-        /* z-index: 2; */
+	}
+
+	/* Hero Content Wrapper (Glass Card) */
+	.hero-content-glass {
+		background: rgba(255, 255, 255, 0.15); /* Subtle translucency */
+		backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(20px);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		border-radius: 32px;
+		padding: 60px 80px;
+		box-shadow: 
+			0 20px 60px rgba(0, 0, 235, 0.1), /* Soft blue ambient shadow */
+			inset 0 0 0 1px rgba(255, 255, 255, 0.2); /* Inner rim light */
+		max-width: 1100px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 20px;
+		position: relative; 
+		z-index: 2; 
 	}
 
 	.hero::before {
@@ -259,7 +279,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(rgba(10, 10, 250, 0.25), rgba(250, 250, 250) 75%); /* Dark overlay */
+        background: linear-gradient(rgba(10, 10, 250, 0.25), rgba(250, 250, 250));
         z-index: 0;
     }
 
@@ -302,9 +322,10 @@
 	}
 
 	.hero h1 {
-		font-size: clamp(2.5rem, 6vw, 5rem);
+		/* Responsive Fluid Typography */
+		font-size: clamp(2rem, 5vw, 4rem);
 		font-weight: 700;
-		line-height: 1.05;
+		line-height: 1.1; /* Tighter line height */
 		margin-bottom: 24px;
 		letter-spacing: -0.03em;
 		color: var(--color-text);
@@ -322,7 +343,7 @@
 		color: var(--color-text-secondary);
 		max-width: 800px;
 		margin: 0 auto 40px;
-		line-height: 1.6;
+		line-height: 1.5; /* Tighter line height */
 		animation: fadeInUp 0.8s ease 0.2s forwards;
 	}
 
@@ -474,8 +495,10 @@
 	}
 
 	.section-title {
-		font-size: clamp(2rem, 4vw, 3rem);
+		/* Fluid size for Section Headers */
+		font-size: clamp(1.8rem, 4vw, 3rem);
 		font-weight: 700;
+		line-height: 1.2;
 		margin-bottom: 16px;
 		color: var(--color-blue-500);
 		text-align: center;
@@ -528,7 +551,8 @@
 	}
 
 	.card h3 {
-		font-size: 1.5rem;
+		font-size: 1.4rem;
+		line-height: 1.3;
 		font-weight: 600;
 		margin-bottom: 16px;
 		color: var(--color-blue-500);
@@ -603,14 +627,16 @@
 	}
 
 	.highlight-card h2 {
-		font-size: 2.5rem;
+		/* Fluid Typography */
+		font-size: clamp(1.8rem, 4vw, 2.5rem);
+		line-height: 1.25;
 		margin-bottom: 24px;
 		color: var(--color-text);
 	}
 
 	.highlight-card p {
-		font-size: 1.2rem;
-		line-height: 1.8;
+		font-size: 1.15rem;
+		line-height: 1.6;
 		color: var(--color-text-secondary);
 		max-width: 900px;
 		margin: 0 auto;
@@ -689,7 +715,7 @@
 
 	.instructor-content p {
 		font-size: 1.1rem;
-		line-height: 1.8;
+		line-height: 1.7;
 		color: var(--color-text-secondary);
 		margin-bottom: 16px;
 	}
@@ -898,6 +924,9 @@
 		padding: 16px 20px;
 		z-index: 90;
 		box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(20px);
+		
 	}
 
 	.mobile-cta button {
@@ -919,8 +948,11 @@
 			padding: 40px 20px;
 		}
 
-		.hero h1 {
-			font-size: 2.5rem;
+		.hero-content-glass {
+			padding: 40px 24px;
+			border-radius: 24px;
+			background: rgba(255, 255, 255, 0.3); /* Slightly more opaque on mobile */
+			backdrop-filter: blur(24px);
 		}
 
 		.hero-stats {
@@ -928,10 +960,6 @@
 		}
 
 		.stat-number {
-			font-size: 2rem;
-		}
-
-		.section-title {
 			font-size: 2rem;
 		}
 
@@ -961,20 +989,50 @@
 		section {
 			padding: 60px 20px;
 		}
+		
+		.section-subtitle {
+			margin-bottom: 32px;
+		}
 	}
 
 	@media (max-width: 480px) {
+		.container{
+			padding: 0;
+		}
+		.info-grid{
+			padding: 20px;
+		}
+		/* Edge-to-Edge Cards Logic */
+		/* This pulls cards outside the container padding on mobile */
+		.card, 
+		.highlight-card,
+		.instructor,
+		.running-text,
+		.hero-content-glass { 
+			border-radius: 20px;
+			border-left: none;
+			border-right: none;
+			/* margin-left: -20px; 
+			margin-right: -20px; */
+			/* width: calc(100% + 40px); */
+			width: 100%;
+			padding: 30px 20px;
+		}
+		
 		.hero-cta {
 			padding: 14px 32px;
 			font-size: 1rem;
 		}
 
-		.card {
-			padding: 24px;
+		/* Instructor Layout Mobile Fix */
+		.instructor {
+			display: flex;
+			flex-direction: column;
 		}
 
-		.highlight-card {
-			padding: 32px 24px;
+		/* Grid Gap Adjustment */
+		.grid {
+			gap: 16px;
 		}
 	}
 </style>
@@ -994,27 +1052,32 @@
 
 <!-- Hero Section -->
 <section class="hero" style="background-image: url({bg}); background-size: cover; background-position: center;">
-	<img src={logo} alt="SA lab" class="hero-logo-img" />
+	
+	<!-- Added Glass Wrapper -->
+	<div class="hero-content-glass">
+		<img src={logo} alt="SA lab" class="hero-logo-img" />
 
-	<h1>ГАЙД ПО AI<br />для архитекторов</h1>
+		<h1>ГАЙД ПО AI<br />для архитекторов</h1>
 
-	<p class="subtitle">
-		Не утонуть в информационном шуме и создать фундамент интеграции AI в архитектурную практику за
-		4 занятия
-	</p>
+		<p class="subtitle">
+			Не утонуть в информационном шуме и создать фундамент интеграции AI в архитектурную практику за
+			4 занятия
+		</p>
 
-	<div class="hero-stats">
-		<div class="stat">
-			<span class="stat-number" data-target="20">0</span>
-			<span class="stat-label">Нейронок</span>
+		<div class="hero-stats">
+			<div class="stat">
+				<span class="stat-number" data-target="20">0</span>
+				<span class="stat-label">Нейронок</span>
+			</div>
+			<div class="stat">
+				<span class="stat-number" data-target="4">0</span>
+				<span class="stat-label">Занятия</span>
+			</div>
 		</div>
-		<div class="stat">
-			<span class="stat-number" data-target="4">0</span>
-			<span class="stat-label">Занятия</span>
-		</div>
+
+		<button class="hero-cta" on:click={() => openModal('register')}> Забронировать место → </button>
 	</div>
 
-	<button class="hero-cta" on:click={() => openModal('register')}> Забронировать место → </button>
 </section>
 
 <div class="container">
@@ -1110,6 +1173,36 @@
 		</div>
 	</section>
 
+	<!-- Instructor Section -->
+	<section id="instructor" class="scroll-section">
+		<h2 class="section-title">Куратор</h2>
+
+		<div class="instructor">
+			<img src={photo} alt="Степан Кухарский" />
+
+			<div class="instructor-content">
+				<h3>Степан Кухарский</h3>
+				<p>
+					Привет! Меня зовут Степан Кухарский. Я архитектор и вычислительный дизайнер, более 10 лет
+					использую алгоритмы в работе с городскими территориями, общественными пространствами,
+					зданиями, разрабатываю игры и виртуальную архитектуру.
+				</p>
+				<p>
+					Я люблю делиться опытом и преподаю на международных площадках и конференциях:
+					DigitalFUTURES, CDRF, eCAADe, LiveAacademy.
+				</p>
+				<p>
+					<strong>Более 500 студентов из 22 стран</strong> прошли мои курсы по параметрическому дизайну
+					и цифровым технологиям.
+				</p>
+				<p>
+					На занятиях я выстраиваю дружелюбную атмосферу, открытую для экспериментов и неожиданных
+					решений.
+				</p>
+			</div>
+		</div>
+	</section>
+
 	<!-- Benefits Section -->
 	<section class="scroll-section">
 		<h2 class="section-title">Для кого этот курс?</h2>
@@ -1157,35 +1250,7 @@
 		</div>
 	</section>
 
-	<!-- Instructor Section -->
-	<section id="instructor" class="scroll-section">
-		<h2 class="section-title">Куратор</h2>
-
-		<div class="instructor">
-			<img src={photo} alt="Степан Кухарский" />
-
-			<div class="instructor-content">
-				<h3>Степан Кухарский</h3>
-				<p>
-					Привет! Меня зовут Степан Кухарский. Я архитектор и вычислительный дизайнер, более 10 лет
-					использую алгоритмы в работе с городскими территориями, общественными пространствами,
-					зданиями, разрабатываю игры и виртуальную архитектуру.
-				</p>
-				<p>
-					Я люблю делиться опытом и преподаю на международных площадках и конференциях:
-					DigitalFUTURES, CDRF, eCAADe, LiveAacademy.
-				</p>
-				<p>
-					<strong>Более 500 студентов из 22 стран</strong> прошли мои курсы по параметрическому дизайну
-					и цифровым технологиям.
-				</p>
-				<p>
-					На занятиях я выстраиваю дружелюбную атмосферу, открытую для экспериментов и неожиданных
-					решений.
-				</p>
-			</div>
-		</div>
-	</section>
+	
 
 	<!-- Registration Section -->
 	<section id="intro_vid" class="scroll-section">
@@ -1233,7 +1298,7 @@
 		<a href="/privacy-policy">Политика конфиденциальности</a>
 		<a href="/oferta">Публичная оферта</a>
 	</div>
-	<p class="footer-copy">© 2024 SA lab</p>
+	<p class="footer-copy">© 2025 SA lab</p>
 </footer>
 
 <!-- Modal -->
