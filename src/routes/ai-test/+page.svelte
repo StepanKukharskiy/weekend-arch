@@ -1,12 +1,25 @@
 <script>
 	import { onMount } from 'svelte';
 	import photo from '$lib/images/photo.jpg';
-    import bg from '$lib/images/archweekend_flowfield.webp';
+	import bg from '$lib/images/archweekend_flowfield.webp';
 	import logo from '$lib/images/logo_nobg.png';
+	import img0 from '$lib/images/0.png'
+	import img1 from '$lib/images/1.png'
+	import img2 from '$lib/images/2.png'
+	import img3 from '$lib/images/3.png'
+	import img4 from '$lib/images/4.png'
+	import img5 from '$lib/images/5.png'
+	import img6 from '$lib/images/6.png'
+	import img7 from '$lib/images/7.png'
 
 	let modalActive = false;
 	let modalType = '';
 	let stickyNavVisible = false;
+
+    // Placeholder images for the grid (Replace these with your actual imports)
+    const projectImages = [
+        img0, img1, img2, img3, img4, img5, img6, img7
+    ];
 
 	onMount(() => {
 		// Sticky navigation
@@ -70,9 +83,11 @@
 	const modals = {
 		register: {
 			title: 'ГАЙД ПО AI для архитекторов',
-			text: 'Регистрация скоро откроется.',
-			link: '#',
-			linkText: 'OK'
+			text: `Оплачивая курс, вы получаете вечный доступ к записям всех 4-х занятий (теория + практика) и вступаете в закрытое комьюнити для обсуждения любых вопросов.
+				Мы свяжемся с вами по email в течение 24 часов после оплаты и откроем доступ к материалам.
+				Рады видеть вас на курсе! Успехов в освоении ИИ!`,
+			link: 'https://auth.robokassa.ru/merchant/Invoice/pJBLb8sa8EamzXnLWvukGQ',
+			linkText: 'Перейти к оплате'
 		}
 	};
 
@@ -106,7 +121,6 @@
 		background: var(--color-bg) !important;
 		color: var(--color-text) !important;
 		font-family: var(--font-sans) !important;
-		/* Updated line-height for better density */
 		line-height: 1.6 !important; 
 		overflow-x: hidden !important;
 		display: block !important;
@@ -226,17 +240,16 @@
 		overflow: hidden;
 	}
 
-	/* Hero Content Wrapper (Glass Card) */
 	.hero-content-glass {
-		background: rgba(255, 255, 255, 0.15); /* Subtle translucency */
+		background: rgba(255, 255, 255, 0.15);
 		backdrop-filter: blur(20px);
 		-webkit-backdrop-filter: blur(20px);
 		border: 1px solid rgba(255, 255, 255, 0.3);
 		border-radius: 32px;
 		padding: 60px 80px;
 		box-shadow: 
-			0 20px 60px rgba(0, 0, 235, 0.1), /* Soft blue ambient shadow */
-			inset 0 0 0 1px rgba(255, 255, 255, 0.2); /* Inner rim light */
+			0 20px 60px rgba(0, 0, 235, 0.1),
+			inset 0 0 0 1px rgba(255, 255, 255, 0.2);
 		max-width: 1100px;
 		width: 100%;
 		display: flex;
@@ -322,10 +335,9 @@
 	}
 
 	.hero h1 {
-		/* Responsive Fluid Typography */
 		font-size: clamp(2rem, 5vw, 4rem);
 		font-weight: 700;
-		line-height: 1.1; /* Tighter line height */
+		line-height: 1.1;
 		margin-bottom: 24px;
 		letter-spacing: -0.03em;
 		color: var(--color-text);
@@ -343,7 +355,7 @@
 		color: var(--color-text-secondary);
 		max-width: 800px;
 		margin: 0 auto 40px;
-		line-height: 1.5; /* Tighter line height */
+		line-height: 1.5;
 		animation: fadeInUp 0.8s ease 0.2s forwards;
 	}
 
@@ -495,7 +507,6 @@
 	}
 
 	.section-title {
-		/* Fluid size for Section Headers */
 		font-size: clamp(1.8rem, 4vw, 3rem);
 		font-weight: 700;
 		line-height: 1.2;
@@ -525,6 +536,42 @@
 
 	.grid-3 {
 		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	}
+    
+    /* Image Grid */
+    .grid-images {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 40px;
+    }
+
+	.project-image {
+		position: relative;
+		aspect-ratio: 1/1.32;
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: var(--shadow-glass);
+		transition: var(--transition);
+		cursor: pointer;
+
+		/* Added properties for the link tag: */
+		display: block; 
+		text-decoration: none;
+		color: inherit;
+	}
+
+	.project-image:hover {
+		transform: scale(1.03);
+		box-shadow: 0 12px 32px rgba(0, 0, 235, 0.3);
+		z-index: 2;
+	}
+
+	.project-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
 	}
 
 	.grid-asymmetric {
@@ -609,7 +656,6 @@
 		width: 200%;
 		height: 200%;
 		background: radial-gradient(circle, rgba(0, 102, 255, 0.1) 0%, transparent 70%);
-		/* animation: rotate 20s linear infinite; */
 	}
 
 	@keyframes rotate {
@@ -627,11 +673,13 @@
 	}
 
 	.highlight-card h2 {
-		/* Fluid Typography */
 		font-size: clamp(1.8rem, 4vw, 2.5rem);
 		line-height: 1.25;
+		text-align: left;
+		margin: 0 auto;
 		margin-bottom: 24px;
-		color: var(--color-text);
+		max-width: 900px;
+		color: var(--color-blue-500);
 	}
 
 	.highlight-card p {
@@ -808,7 +856,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: rgba(0, 0, 0, 0.6);
+		background: rgba(255, 255, 255, 0.6);
 		backdrop-filter: blur(4px);
 		z-index: 1000;
 		padding: 20px;
@@ -832,13 +880,13 @@
 	}
 
 	.modal-content {
-		background: var(--color-glass-strong);
-		backdrop-filter: blur(24px);
+		background: var(--color-glass);
+		backdrop-filter: blur(40px);
 		-webkit-backdrop-filter: blur(24px);
 		border: 1px solid rgba(0, 102, 255, 0.4);
 		border-radius: 24px;
 		padding: 48px;
-		max-width: 540px;
+		max-width: 600px;
 		width: 100%;
 		position: relative;
 		animation: slideUp 0.3s ease;
@@ -942,6 +990,12 @@
 	}
 
 	/* Responsive */
+	@media (max-width: 1024px) {
+		.grid-images {
+			grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+		}
+	}
+
 	@media (max-width: 768px) {
 		.hero {
 			min-height: auto;
@@ -951,7 +1005,7 @@
 		.hero-content-glass {
 			padding: 40px 24px;
 			border-radius: 24px;
-			background: rgba(255, 255, 255, 0.3); /* Slightly more opaque on mobile */
+			background: rgba(255, 255, 255, 0.3);
 			backdrop-filter: blur(24px);
 		}
 
@@ -1002,8 +1056,7 @@
 		.info-grid{
 			padding: 20px;
 		}
-		/* Edge-to-Edge Cards Logic */
-		/* This pulls cards outside the container padding on mobile */
+		
 		.card, 
 		.highlight-card,
 		.instructor,
@@ -1012,9 +1065,6 @@
 			border-radius: 20px;
 			border-left: none;
 			border-right: none;
-			/* margin-left: -20px; 
-			margin-right: -20px; */
-			/* width: calc(100% + 40px); */
 			width: 100%;
 			padding: 30px 20px;
 		}
@@ -1024,16 +1074,19 @@
 			font-size: 1rem;
 		}
 
-		/* Instructor Layout Mobile Fix */
 		.instructor {
 			display: flex;
 			flex-direction: column;
 		}
 
-		/* Grid Gap Adjustment */
 		.grid {
 			gap: 16px;
 		}
+
+        .grid-images {
+            grid-template-columns: 1fr; /* 1 column on mobile */
+            padding: 0 20px; /* Restore padding for edge-to-edge container logic */
+        }
 	}
 </style>
 
@@ -1046,7 +1099,7 @@
 			<a href="#instructor">Куратор</a>
 			<a href="#contact">Контакты</a>
 		</div>
-		<a href="#register" class="nav-cta">Регистрация</a>
+		<a href="#register" class="nav-cta">Присоединиться</a>
 	</nav>
 </div>
 
@@ -1060,8 +1113,7 @@
 		<h1>ГАЙД ПО AI<br />для архитекторов</h1>
 
 		<p class="subtitle">
-			Не утонуть в информационном шуме и создать фундамент интеграции AI в архитектурную практику за
-			4 занятия
+			Учим методологии использования AI в архитектурной практике
 		</p>
 
 		<div class="hero-stats">
@@ -1075,7 +1127,7 @@
 			</div>
 		</div>
 
-		<button class="hero-cta" on:click={() => openModal('register')}> Забронировать место → </button>
+		<button class="hero-cta" on:click={() => openModal('register')}> Присоединиться → </button>
 	</div>
 
 </section>
@@ -1084,42 +1136,35 @@
 	<!-- Running Text -->
 	<div class="running-text">
 		<div class="running-text-inner">
-			<span>ChatGPT • Perplexity • Stable Diffusion • ControlNet • Replicate</span>
-			<span>ChatGPT • Perplexity • Stable Diffusion • ControlNet • Replicate</span>
-			<span>ChatGPT • Perplexity • Stable Diffusion • ControlNet • Replicate</span>
+			<span>Nano Banana • ChatGPT • Perplexity • Stable Diffusion • ControlNet</span>
+			<span>Nano Banana • ChatGPT • Perplexity • Stable Diffusion • ControlNet</span>
+			<span>Nano Banana • ChatGPT • Perplexity • Stable Diffusion • ControlNet</span>
 		</div>
 	</div>
 
 	<!-- Key Info -->
 	<div class="info-grid">
 		<div class="info-item">
-			<h3>4 занятия</h3>
+			<h3>Теория + Практика</h3>
 		</div>
 		<div class="info-item">
-			<h3>Online в записи</h3>
+			<h3>Online курс</h3>
 		</div>
 		<div class="info-item">
-			<h3>Теория и Практика</h3>
+			<h3>Для новичков</h3>
 		</div>
 		<div class="info-item">
-			<h3>Проект в портфолио</h3>
+			<h3>5500₽</h3>
 		</div>
 	</div>
 
 	<!-- About Section -->
 	<section id="about" class="scroll-section">
 		<div class="highlight-card">
-			<h2>Вопрос не в том, использовать ли AI</h2>
+			<h2>AI уже работает в архитектуре. Вопрос не в том, использовать ли, вопрос в том, как начать и не потеряться среди тысячи нейронок.</h2>
 			<p>
-				Вопрос в том, как начать и не потеряться среди тысячи нейронок. Как встроить искусственный
-				интеллект в архитектурное проектирование? Как быстро адаптироваться к скорости внедрения AI?
-				<br /><br />
-				На этом курсе мы рассказываем о <strong>методологии работы с AI</strong>, которая не будет
-				привязана к выходу новой нейронки, а создаст фундамент интеграции в практику.
-				<br /><br />
-				За четыре занятия вы создадите деревянный павильон для тестирования методологии. Поймете,
-				как выбирать нейронку под конкретную задачу, писать промпт, который работает, научитесь делегировать
-				рутинные задачи и экспериментировать.
+				Как не утонуть в информационном шуме, когда новые инструменты появляются каждый месяц? Как встроить искусственный интеллект в архитектурную проектирование? Как быстро адаптироваться к скорости внедрения AI? На этом курсе мы рассказываем о <strong>методологии работы с AI</strong>, который не будет привязан к выходу новой нейронки, а создаст фундамент интеграции в практику.<br><br>
+				За четыре занятия вы создадите деревянный павильон для тестирования методологии. Поймете, как выбирать нейронку под конкретную задачу, писать промпт, который работает, научитесь делегировать рутинные задачи и экспериментировать.
 			</p>
 		</div>
 	</section>
@@ -1203,6 +1248,25 @@
 		</div>
 	</section>
 
+	<!-- Projects Section -->
+	<section id="projects" class="scroll-section">
+			<h2 class="section-title">Проекты</h2>
+			<p class="section-subtitle">Примеры работ, созданных с использованием AI командой SA lab</p>
+
+			<div class="grid-images">
+					{#each projectImages as img, i}
+							<a 
+									href="https://www.behance.net/SAlab_architecture" 
+									target="_blank" 
+									rel="noopener noreferrer" 
+									class="project-image"
+							>
+									<img src={img} alt="Студенческий проект {i+1}" loading="lazy"/>
+							</a>
+					{/each}
+			</div>
+	</section>
+
 	<!-- Benefits Section -->
 	<section class="scroll-section">
 		<h2 class="section-title">Для кого этот курс?</h2>
@@ -1250,9 +1314,7 @@
 		</div>
 	</section>
 
-	
-
-	<!-- Registration Section -->
+	<!-- Intro Video Section -->
 	<section id="intro_vid" class="scroll-section">
 		<h2 class="section-title">Введение</h2>
 		<div class="highlight-card">
@@ -1268,10 +1330,10 @@
 	<!-- Registration Section -->
 	<section id="register" class="scroll-section">
 		<div class="highlight-card">
-			<h2>Забронируйте место на курсе</h2>
-			<p>Начните свой путь интеграции AI в архитектурную практику уже сейчас</p>
+			<h2 style='text-align: center;'>Забронируйте место на курсе</h2>
+			<p style='text-align: center;'>Начните свой путь интеграции AI в архитектурную практику уже сейчас</p>
 			<button class="hero-cta" on:click={() => openModal('register')} style="margin: 40px auto 0;">
-				Хочу с вами →
+				Присоединиться →
 			</button>
 		</div>
 	</section>
@@ -1313,7 +1375,7 @@
 		<div class="modal-content" on:click|stopPropagation role="dialog">
 			<button class="modal-close" on:click={closeModal}>✕</button>
 			<h3>{currentModal.title}</h3>
-			<p>{currentModal.text}</p>
+			<p style="white-space: pre-line;">{currentModal.text}</p>
 			{#if currentModal.link !== '#'}
 				<a href={currentModal.link} class="modal-btn">{currentModal.linkText}</a>
 				<p style="font-size: 0.9rem; margin-top: 20px; color: var(--color-text-secondary);">
