@@ -3,14 +3,14 @@
 	import photo from '$lib/images/photo.jpg';
 	import bg from '$lib/images/archweekend_flowfield.webp';
 	import logo from '$lib/images/logo_nobg.png';
-	import img0 from '$lib/images/0.png'
-	import img1 from '$lib/images/1.png'
-	import img2 from '$lib/images/2.png'
-	import img3 from '$lib/images/3.png'
-	import img4 from '$lib/images/4.png'
-	import img5 from '$lib/images/5.png'
-	import img6 from '$lib/images/6.png'
-	import img7 from '$lib/images/7.png'
+	import img0 from '$lib/images/0.webp'
+	import img1 from '$lib/images/1.webp'
+	import img2 from '$lib/images/2.webp'
+	import img3 from '$lib/images/3.webp'
+	import img4 from '$lib/images/4.webp'
+	import img5 from '$lib/images/5.webp'
+	import img6 from '$lib/images/6.webp'
+	import img7 from '$lib/images/7.webp'
 
 	let modalActive = false;
 	let modalType = '';
@@ -1164,7 +1164,7 @@
 			<h2>AI уже работает в архитектуре. Вопрос не в том, использовать ли, вопрос в том, как начать и не потеряться среди тысячи нейронок.</h2>
 			<p>
 				Как не утонуть в информационном шуме, когда новые инструменты появляются каждый месяц? Как встроить искусственный интеллект в архитектурную проектирование? Как быстро адаптироваться к скорости внедрения AI? На этом курсе мы рассказываем о <strong>методологии работы с AI</strong>, который не будет привязан к выходу новой нейронки, а создаст фундамент интеграции в практику.<br><br>
-				За четыре занятия вы создадите деревянный павильон для тестирования методологии. Поймете, как выбирать нейронку под конкретную задачу, писать промпт, который работает, научитесь делегировать рутинные задачи и экспериментировать.
+				За четыре занятия вы с нуля создадите деревянный павильон для тестирования методологии. Поймете, как выбирать нейронку под конкретную задачу, писать промпт, который работает, научитесь делегировать рутинные задачи и экспериментировать.
 			</p>
 		</div>
 	</section>
@@ -1319,7 +1319,7 @@
 		<h2 class="section-title">Введение</h2>
 		<div class="highlight-card">
 			<iframe
-				src="https://player.mux.com/KEwmiM2Gs02c7oIacWMK4JUixwwj4WKvCTYDsMnif6no?metadata-video-title=lesson+1&video-title=lesson+1&accent-color=%230000ff"
+				src="https://player.mux.com/KEwmiM2Gs02c7oIacWMK4JUixwwj4WKvCTYDsMnif6no?metadata-video-title=lesson+1o&video-title=intro&accent-color=%230000ff"
 				style="width: 100%; border: none; aspect-ratio: 16/9;"
 				allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
 				allowfullscreen
