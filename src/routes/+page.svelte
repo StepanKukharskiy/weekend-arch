@@ -1,5 +1,6 @@
 									<script>
 										import { onMount } from 'svelte';
+										import { goto, invalidateAll } from '$app/navigation';
 										import photo from '$lib/images/photo.jpg';
 										import bg from '$lib/images/archweekend_flowfield.webp';
 										import logo from '$lib/images/logo_nobg.png';
@@ -11,6 +12,8 @@
 										import img5 from '$lib/images/5.webp'
 										import img6 from '$lib/images/6.webp'
 										import img7 from '$lib/images/7.webp'
+
+										export let data = {}; 
 
 										let modalActive = false;
 										let modalType = '';
@@ -92,6 +95,23 @@
 										};
 
 										$: currentModal = modals[modalType] || modals.register;
+										// Determine if user is logged in
+										$: isLoggedIn = data?.user || false; 
+
+										async function handleSignOut() {
+											try {
+												await fetch('/api/user/signout', {
+													method: 'POST',
+													headers: {
+														'Content-Type': 'application/json'
+													}
+												});
+												// The redirect will happen on the server side
+												window.location.href = '/';
+											} catch (err) {
+												console.error('Logout failed:', err);
+											}
+										}
 									</script>
 
 									<svelte:head>
@@ -1098,8 +1118,24 @@
 												<a href="#program">Программа</a>
 												<a href="#instructor">Куратор</a>
 												<a href="#contact">Контакты</a>
+												{#if isLoggedIn}
+													<a href="/course">Материалы</a>
+												{/if}
 											</div>
+											<div>
+												{#if !isLoggedIn}
+											<a href="/user/signin" style='margin-right: 20px;'>Войти</a>
+												{:else}
+													<button 
+														class="nav-link-btn" 
+														on:click={handleSignOut} 
+														style='margin-right: 20px; background:none; border:none; cursor:pointer; font-size:0.95rem; font-weight:500; color:var(--color-text);'
+													>
+														Выход
+													</button>
+												{/if}
 											<a href="#register" class="nav-cta">Присоединиться</a>
+												</div>
 										</nav>
 									</div>
 
