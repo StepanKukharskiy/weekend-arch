@@ -17,7 +17,7 @@
 
 										let modalActive = false;
 										let modalType = '';
-										let stickyNavVisible = false;
+										let stickyNavVisible = true;
 
 											// Placeholder images for the grid (Replace these with your actual imports)
 											const projectImages = [
